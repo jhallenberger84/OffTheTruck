@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-19",
+  "subject": "Milwaukee impact driver $153.99 vs. Mac Tools $229.99",
+  "summary": "A bare Milwaukee M18 FUEL SURGE impact driver at $153.99 next to Mac Tools' comparable bare driver at $229.99, plus one where the truck wins.",
+  "body": [
+    "Today's pick: the Milwaukee M18 FUEL SURGE 1/4\" hex impact driver, tool only, is $153.99 at ToolNut. Mac Tools' MCF886 20V MAX bare impact driver is $229.99 on mactools.com. That's $76 less, about 33%. They're different tools, so check torque and battery platform before you switch.",
+    "The truck doesn't always lose. Knipex 10\" Click hose clamp pliers with rotating tips are $47.57 at ToolNut. Mac's Clic R hose clamp pliers (fixed tips) are $41.99."
+  ],
+  "deals": [
+    {
+      "slug": "milwaukee-m18-fuel-surge-impact-driver",
+      "title": "Milwaukee M18 FUEL SURGE 1/4\" Hex Hydraulic Impact Driver, tool only",
+      "retailer": "ToolNut",
+      "sale_price": 153.99,
+      "source_url": "https://www.toolnut.com/products/milwaukee-m18-fuel-surge-1-4-hex-hydraulic-impact-driver-tool-only-promo",
+      "truck_brand": "Mac Tools",
+      "truck_title": "Mac Tools MCF886 20V MAX 1/4\" Hex Brushless Impact Driver (bare)",
+      "truck_price": 229.99,
+      "truck_url": "https://www.mactools.com/products/mcf886",
+      "checked_at": "2026-11-20T01:05:00.000Z"
+    },
+    {
+      "slug": "knipex-85-51-250-c-click-hose-clamp-pliers",
+      "title": "Knipex 10\" Hose Clamp Pliers for Click Clamps, rotating tips (85 51 250 C SBA)",
+      "retailer": "ToolNut",
+      "sale_price": 47.57,
+      "source_url": "https://www.toolnut.com/products/knipex-10-in-hose-clamp-pliers-for-click-clamps-with-rotating-tips-85-51-250-c-sba",
+      "truck_brand": "Mac Tools",
+      "truck_title": "Mac Tools HCP18001 Clic R Hose Clamp Pliers (fixed tips)",
+      "truck_price": 41.99,
+      "truck_url": "https://www.mactools.com/products/hcp18001",
+      "checked_at": "2026-11-20T01:05:00.000Z"
+    }
+  ]
+}
