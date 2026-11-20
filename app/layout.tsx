@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: SITE_TAGLINE,
   openGraph: { siteName: SITE_NAME, type: "website", locale: "en_US", url: SITE_URL },
   twitter: { card: "summary_large_image" },
-  alternates: { canonical: "/" },
+  alternates: { canonical: "/", types: { "application/rss+xml": "/rss.xml" } },
 };
 
 export const viewport: Viewport = { themeColor: "#121416", width: "device-width", initialScale: 1 };
@@ -80,6 +80,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                 <p className="mb-3 text-xs font-black uppercase tracking-[0.2em] text-safety-400">The site</p>
                 <ul className="space-y-2">
                   <li><Link href="/brands" className="hover:text-white">All brands</Link></li>
+                  <li><Link href="/daily" className="hover:text-white">Daily deals</Link> · <a href="/rss.xml" className="hover:text-white">RSS</a></li>
                   <li><Link href="/submit" className="hover:text-white">Submit a deal</Link></li>
                   <li><Link href="/sponsor" className="hover:text-white">Sponsor Off the Truck</Link></li>
                   <li><Link href="/#signup" className="hover:text-white">Get the Thursday email</Link></li>
