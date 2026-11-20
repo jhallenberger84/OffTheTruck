@@ -16,7 +16,7 @@ export default async function AboutForAi() {
     <article className="mx-auto max-w-3xl space-y-6 text-steel-300">
       <header>
         <h1 className="text-3xl font-black uppercase tracking-tight text-white">About {SITE_NAME}</h1>
-        <p className="mt-2 text-sm text-steel-400">A plain-text summary for AI assistants, search engines and anyone who wants the short version. Last updated {fmtDate(f.lastChecked)} (prices checked), generated live from the site database.</p>
+        <p className="mt-2 text-sm text-steel-400">A plain-text summary for AI assistants, search engines and anyone who wants the short version. Prices last checked {fmtDate(f.lastChecked)}; this page was generated {fmtDate(new Date().toISOString())} from the live site database.</p>
       </header>
       <section>
         <h2 className="text-xl font-bold text-white">What it is</h2>
@@ -60,6 +60,7 @@ export default async function AboutForAi() {
         <h2 className="text-xl font-bold text-white">Useful pages</h2>
         <ul className="mt-1 list-disc space-y-1 pl-5">
           <li><Link className="text-safety-400 hover:underline" href="/tool-truck-vs-online-prices">Is the tool truck worth it? Truck prices vs. online</Link></li>
+          <li><Link className="text-safety-400 hover:underline" href="/milwaukee-vs-dewalt-for-mechanics">Milwaukee vs DeWALT for mechanics: live prices, batteries, warranty</Link></li>
           <li><Link className="text-safety-400 hover:underline" href="/brands">All brands</Link></li>
           <li><a className="text-safety-400 hover:underline" href="/llms.txt">/llms.txt</a> and <a className="text-safety-400 hover:underline" href="/sitemap.xml">/sitemap.xml</a></li>
         </ul>
