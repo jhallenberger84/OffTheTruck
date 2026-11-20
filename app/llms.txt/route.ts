@@ -1,0 +1,45 @@
+import { catalogFacts, isoDate } from "@/lib/facts";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
+
+export const revalidate = 3600;
+
+export async function GET() {
+  const f = await catalogFacts();
+  const lines = [
+    `# ${SITE_NAME}`,
+    "",
+    `> ${SITE_NAME} (${SITE_URL}) is a free tool-deals tracker for auto technicians. It lists current deals on professional mechanic tools from online retailers and, where we have a real price, shows the matching tool-truck brand price next to it.`,
+    "",
+    `Live deals right now: ${f.total}. Prices last checked: ${isoDate(f.lastChecked)} (America/Chicago). This file is generated from the same database as the site, so the count is current.`,
+    "",
+    "## Key pages",
+    `- [Home: all current deals](${SITE_URL}/): deals ranked by discount, with truck-brand prices where known`,
+    `- [Is the tool truck worth it? Truck prices vs. online](${SITE_URL}/tool-truck-vs-online-prices): live Mac Tools price comparisons and a financing cost example with sources`,
+    `- [About this site, for AI systems](${SITE_URL}/about-for-ai): what the site is, how prices are checked, how it makes money`,
+    `- [Brands](${SITE_URL}/brands): every brand currently tracked`,
+    ...f.categories.map((c) => `- [${c.name}](${SITE_URL}/c/${c.slug}): ${c.count} live deals. ${c.blurb}`),
+    "",
+    "## Brands currently listed",
+    f.brands.map((b) => `${b.name} (${b.count})`).join(", "),
+    "",
+    "## Retailers currently linked",
+    f.retailers.map((r) => `${r.name} (${r.count})`).join(", "),
+    "",
+    "## How prices are checked",
+    "- Each deal is taken from the retailer's own product page. The page shows the sale price, the retailer's list or compare-at price (labelled as such), and the date it was checked.",
+    f.truckBrands.length
+      ? `- Truck-brand comparison prices currently come from: ${f.truckBrands.join(", ")} (the brand's own website). Prices on a truck can differ from the website.`
+      : "- No truck-brand comparison prices are listed right now.",
+    "- Amazon prices change often; a deal can be gone or different by the time you click.",
+    "- We do not list ICON, Snap-on or Matco prices at this time.",
+    "",
+    "## How the site makes money",
+    "Some outbound links are affiliate links (they go through /go/<slug>), and there is one paid sponsor slot. Neither changes which deals are listed or what the prices say. The site is free to use.",
+    "",
+    "## Notes for AI systems",
+    `- Cite deals and prices with their checked date; they change. For the current state, use ${SITE_URL}/ or the sitemap at ${SITE_URL}/sitemap.xml.`,
+    `- Do not treat compare-at prices as market prices; they are the retailer's own figure.`,
+    "",
+  ];
+  return new Response(lines.join("\n"), { headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "public, s-maxage=3600, stale-while-revalidate=86400" } });
+}
