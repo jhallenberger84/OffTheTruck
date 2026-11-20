@@ -15,7 +15,7 @@ export default async function Home() {
       <section className="mb-4">
         <h1 className="text-2xl font-black leading-tight text-white sm:text-3xl">Today&apos;s best tool deals</h1>
         <p className="mt-1 text-sm text-steel-400">
-          {deals.length} live deals on ICON, Tekton, GearWrench, Milwaukee, Knipex, Wera and more, with the truck price when there&apos;s a fair match. Last checked {when}.
+          {deals.length} live deals on GearWrench, Milwaukee, DeWALT, Tekton, Knipex, Wera and more, with the truck price when there&apos;s a fair match. Last checked {when}.
         </p>
       </section>
       <DealGrid deals={deals.slice(0, 12)} numbered />
