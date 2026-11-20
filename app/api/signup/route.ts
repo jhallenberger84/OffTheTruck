@@ -15,7 +15,7 @@ export async function POST(req: Request) {
   let resendOk = false;
   if (resend && AUDIENCE_ID) {
     try {
-      const { data, error } = await resend.contacts.create({ email, unsubscribed: false, segments: [{ id: AUDIENCE_ID }] });
+      const { data, error } = await resend.contacts.create({ email, unsubscribed: false, segments: [{ id: AUDIENCE_ID }], properties: { source, signed_up: new Date().toISOString().slice(0, 10) } });
       if (error) {
         if (!/exist/i.test(error.message)) throw new Error(error.message);
         const add = await resend.contacts.segments.add({ email, segmentId: AUDIENCE_ID });
