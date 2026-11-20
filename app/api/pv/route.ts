@@ -1,10 +1,11 @@
 import { NextResponse } from "next/server";
 import { db, logError } from "@/lib/db";
+import { isInternal } from "@/lib/internal";
 
 const BOT = /bot|crawl|spider|slurp|preview|headless|lighthouse|monitor/i;
 
 export async function POST(req: Request) {
-  if (BOT.test(req.headers.get("user-agent") || "")) return new NextResponse(null, { status: 204 });
+  if (isInternal(req.headers) || BOT.test(req.headers.get("user-agent") || "")) return new NextResponse(null, { status: 204 });
   let path = "/";
   try {
     path = String(((await req.json()) as { path?: string }).path || "/").slice(0, 200);

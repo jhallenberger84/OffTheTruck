@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { headers } from "next/headers";
 import { DealGrid } from "@/components/DealCard";
 import { db, logError } from "@/lib/db";
+import { isInternal } from "@/lib/internal";
 import { getActiveDeals, searchDeals } from "@/lib/deals";
 
 export const dynamic = "force-dynamic";
@@ -9,7 +11,7 @@ export const metadata = { title: "Search", robots: { index: false } };
 export default async function Search({ searchParams }: { searchParams: Promise<{ q?: string }> }) {
   const q = String((await searchParams).q ?? "").trim().slice(0, 100);
   const results = q ? searchDeals(await getActiveDeals(), q) : [];
-  if (q && results.length === 0) {
+  if (q && results.length === 0 && !isInternal(await headers())) {
     try {
       const sql = await db();
       if (sql) await sql`insert into zero_result_searches (q) values (${q.toLowerCase()})`;
