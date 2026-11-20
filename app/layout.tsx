@@ -24,6 +24,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const sponsor = await activeSponsor();
   return (
     <html lang="en">
+      <head>
+        {/* @ts-expect-error impact verification uses a value attribute */}
+        <meta name="impact-site-verification" value="8078fe3d-861f-4e9f-9157-bdcb8845d8da" content="8078fe3d-861f-4e9f-9157-bdcb8845d8da" />
+      </head>
       <body className="min-h-screen font-sans antialiased">
         <SponsorBar
           text={sponsor ? `Sponsored: ${sponsor.headline || sponsor.sponsor_name}` : "Sponsor Off the Truck: reach techs who buy tools every week"}
@@ -83,7 +87,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                   <li><Link href="/daily" className="hover:text-white">Daily deals</Link> · <a href="/rss.xml" className="hover:text-white">RSS</a></li>
                   <li><Link href="/submit" className="hover:text-white">Submit a deal</Link></li>
                   <li><Link href="/sponsor" className="hover:text-white">Sponsor Off the Truck</Link></li>
-                  <li><Link href="/#signup" className="hover:text-white">Get the Thursday email</Link></li>
+                  <li><Link href="/#signup" className="hover:text-white">Get the daily email</Link></li>
                   <li><a href="mailto:offthetruckhq@mail.grokbot.com" className="hover:text-white">Contact</a></li>
                 </ul>
               </div>
