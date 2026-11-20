@@ -84,6 +84,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                   <li><Link href="/submit" className="hover:text-white">Submit a deal</Link></li>
                   <li><Link href="/sponsor" className="hover:text-white">Sponsor Off the Truck</Link></li>
                   <li><Link href="/#signup" className="hover:text-white">Get the Thursday email</Link></li>
+                  <li><a href="mailto:offthetruckhq@mail.grokbot.com" className="hover:text-white">Contact</a></li>
                 </ul>
               </div>
               <div>

@@ -62,6 +62,9 @@ export default async function Sponsor() {
       </div>
       <h2 className="mt-8 mb-3 text-lg font-bold text-white">Get in touch</h2>
       <SponsorInquiryForm />
+      <p className="mt-4 text-sm text-steel-400">
+        Prefer email? <a href="mailto:offthetruckhq@mail.grokbot.com" className="font-semibold text-safety-400 underline hover:text-white">Contact</a> us at offthetruckhq@mail.grokbot.com.
+      </p>
     </div>
   );
 }
