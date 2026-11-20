@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { DealGrid } from "@/components/DealCard";
 import { getActiveDeals } from "@/lib/deals";
+import { brandColor } from "@/lib/brands";
 import { brandSlug } from "@/lib/site";
 
 export const revalidate = 300;
@@ -17,8 +18,16 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
   if (!deals.length) notFound();
   return (
     <>
-      <h1 className="text-2xl font-black text-white">{deals[0].brand} deals</h1>
-      <p className="mb-4 text-sm text-steel-400">{deals.length} live deals.</p>
+      <section className="relative -mx-4 -mt-5 mb-5 overflow-hidden diamond-plate sm:mx-0 sm:mt-0 sm:rounded-2xl">
+        <div className="px-5 py-6 sm:px-8">
+          <span className="inline-block rounded-sm px-4 py-2 text-2xl font-black uppercase tracking-wider ring-2 ring-black/50" style={{ background: brandColor(brand).bg, color: brandColor(brand).fg }}>
+            {deals[0].brand}
+          </span>
+          <p className="mt-3 text-sm text-steel-300">{deals.length} live {deals.length === 1 ? "deal" : "deals"} on {deals[0].brand} right now.</p>
+          <h1 className="sr-only">{deals[0].brand} deals</h1>
+        </div>
+        <div className="h-2 hazard" aria-hidden />
+      </section>
       <DealGrid deals={deals} />
     </>
   );

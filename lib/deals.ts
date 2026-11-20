@@ -23,6 +23,7 @@ export type Deal = {
   truck_checked_at?: string | null;
   affiliate_url?: string | null;
   featured?: boolean | null;
+  image_url?: string | null;
   status?: string;
   checked_at: string;
 };
@@ -31,6 +32,8 @@ export function pctOff(d: Pick<Deal, "sale_price" | "list_price">) {
   if (!d.list_price || d.list_price <= d.sale_price) return 0;
   return Math.round((1 - d.sale_price / d.list_price) * 100);
 }
+
+const seedImages = new Map((seed as { slug: string; image_url?: string }[]).map((d) => [d.slug, d.image_url ?? null]));
 
 function normalize(r: Record<string, unknown>): Deal {
   const num = (v: unknown) => (v === null || v === undefined ? null : Number(v));
@@ -42,6 +45,8 @@ function normalize(r: Record<string, unknown>): Deal {
     truck_price: num(r.truck_price),
     checked_at: iso(r.checked_at) as string,
     truck_checked_at: iso(r.truck_checked_at),
+    // Rows seeded before the image column existed fall back to the image fetched with the seed data.
+    image_url: (r.image_url as string | null) || seedImages.get(r.slug as string) || null,
   };
 }
 

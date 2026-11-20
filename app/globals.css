@@ -20,3 +20,30 @@ body { background: var(--color-shop-950); color: #e8eaec; }
 .tread {
   background-image: repeating-linear-gradient(135deg, var(--color-safety-500) 0 10px, #111 10px 20px);
 }
+
+/* Safety stripe */
+.hazard {
+  background-image: repeating-linear-gradient(135deg, var(--color-safety-500) 0 12px, #111 12px 24px);
+}
+
+/* Diamond plate: raised diamonds on brushed steel, drawn in SVG so it costs no image request */
+.diamond-plate {
+  background-color: #2a2e33;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cg fill='none' stroke-linecap='round'%3E%3Cpath d='M4 10 L10 4' stroke='%23ffffff' stroke-opacity='.13' stroke-width='3'/%3E%3Cpath d='M5 11 L11 5' stroke='%23000000' stroke-opacity='.35' stroke-width='2'/%3E%3Cpath d='M18 18 L24 24' stroke='%23ffffff' stroke-opacity='.13' stroke-width='3'/%3E%3Cpath d='M17 19 L23 25' stroke='%23000000' stroke-opacity='.35' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(180deg, #3a3f45 0%, #24282c 55%, #1b1e21 100%);
+  background-size: 28px 28px, 100% 100%;
+}
+
+/* Pegboard: shop-wall holes */
+.pegboard {
+  background-color: #1f2326;
+  background-image: radial-gradient(circle at 50% 50%, #0d0f10 0 2.2px, transparent 2.6px);
+  background-size: 22px 22px;
+}
+
+.text-shadow-hard { text-shadow: 0 2px 0 rgba(0, 0, 0, 0.6); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

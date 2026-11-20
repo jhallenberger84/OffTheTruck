@@ -4,7 +4,7 @@ import { CATEGORIES } from "./site";
 export const DEAL_FIELDS = [
   "slug", "title", "brand", "category", "retailer", "url", "source", "sale_price", "list_price", "list_price_label",
   "condition", "notes", "truck_brand", "truck_title", "truck_price", "truck_url", "truck_checked_at", "affiliate_url",
-  "featured", "status", "checked_at", "expires_at",
+  "featured", "status", "checked_at", "expires_at", "image_url",
 ] as const;
 
 export function slugify(s: string) {
@@ -23,6 +23,7 @@ export function cleanDeal(input: Record<string, unknown>, partial = false): { ok
   if ("category" in v && !CATEGORIES.some((c) => c.slug === v.category)) return { ok: false, error: `category must be one of ${CATEGORIES.map((c) => c.slug).join(", ")}` };
   if ("status" in v && !["active", "expired", "draft"].includes(String(v.status))) return { ok: false, error: "status must be active, expired, or draft" };
   if ("url" in v && !/^https?:\/\//.test(String(v.url))) return { ok: false, error: "url must start with http(s)://" };
+  if ("image_url" in v && v.image_url !== null && !/^https:\/\//.test(String(v.image_url))) return { ok: false, error: "image_url must start with https://" };
   if (!partial) {
     for (const k of ["title", "brand", "category", "retailer", "url", "sale_price", "list_price"]) if (v[k] === undefined || v[k] === null) return { ok: false, error: `${k} is required` };
     if (!v.slug) v.slug = slugify(`${v.brand} ${v.title}`);

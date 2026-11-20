@@ -13,7 +13,8 @@
   "condition": null,
   "source": "https://www.toolnut.com/products/milwaukee-2848-20-m18-compact-tire-inflator-with-m18-redlithium-xc-5-0ah-extended-capacity-battery-2-pack",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": true
+  "featured": true,
+  "image_url": "https://cdn.shopify.com/s/files/1/0933/1582/5958/files/48-11-1852-2848-20_bundle.jpg?v=1795016000&width=480"
  },
  {
   "slug": "milwaukee-2522-20-m12-fuel-cut-off",
@@ -29,7 +30,8 @@
   "condition": null,
   "source": "https://www.toolnut.com/products/milwaukee-2522-20-m12-fuel-3-compact-cut-off-tool-tool-only",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://cdn.shopify.com/s/files/1/0933/1582/5958/files/2522-20_2.jpg?v=1778172101&width=480"
  },
  {
   "slug": "milwaukee-m18-fuel-surge-impact-driver",
@@ -50,7 +52,8 @@
   "source": "https://www.toolnut.com/products/milwaukee-m18-fuel-surge-1-4-hex-hydraulic-impact-driver-tool-only-promo",
   "checked_at": "2026-11-19T18:50:00-06:00",
   "truck_checked_at": "2026-11-19T19:05:00-06:00",
-  "featured": true
+  "featured": true,
+  "image_url": "https://cdn.shopify.com/s/files/1/0933/1582/5958/files/2761-20_1.jpg?v=1758927637&width=480"
  },
  {
   "slug": "milwaukee-48-11-1850r-xc5-battery-2-pack",
@@ -66,7 +69,8 @@
   "condition": null,
   "source": "https://www.toolnut.com/products/milwaukee-48-11-1850r-m18-redlithium-xc5-0-resistant-battery-promo-2-pack",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": true
+  "featured": true,
+  "image_url": "https://cdn.shopify.com/s/files/1/0933/1582/5958/files/PROMO-48-11-1850R-2x.jpg?v=1787690479&width=480"
  },
  {
   "slug": "milwaukee-2646-20-grease-gun-with-battery",
@@ -82,7 +86,8 @@
   "condition": null,
   "source": "https://www.toolnut.com/products/milwaukee-2646-20-m18-cordless-2-speed-grease-gun-with-free-milwaukee-48-11-1850r-m18-redlithium-xc5-0-oil-solvent-resistant-battery-promo",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://cdn.shopify.com/s/files/1/0933/1582/5958/files/PROMO-48-11-1850R-2646-20-composite.jpg?v=1788988844&width=480"
  },
  {
   "slug": "milwaukee-3841-20-hotshot-jump-starter",
@@ -98,7 +103,8 @@
   "condition": null,
   "source": "https://www.toolnut.com/products/milwaukee-3841-20-m18-hotshot-jump-starter-with-free-milwaukee-48-11-1850r-m18-redlithium-xc5-0-oil-solvent-resistant-battery-promo",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://cdn.shopify.com/s/files/1/0933/1582/5958/files/3841-20-PROMO-48-11-1850R-composite.jpg?v=1788986743&width=480"
  },
  {
   "slug": "milwaukee-packout-cabinet-rolling-drawer",
@@ -114,7 +120,8 @@
   "condition": null,
   "source": "https://www.toolnut.com/products/milwaukee-48-22-8445-packout-cabinet-48-22-8420-packout-rolling-drawer-tool-box",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://cdn.shopify.com/s/files/1/0933/1582/5958/files/48-22-8445-48-22-8420.jpg?v=1793108500&width=480"
  },
  {
   "slug": "milwaukee-m12-rover-flood-light-battery",
@@ -130,7 +137,8 @@
   "condition": null,
   "source": "https://www.toolnut.com/products/milwaukee-m12-rover-700-lumen-flood-light-with-usb-charging-w-m12-redlithium-high-output-cp-2-5ah-battery-pack-2367-20-promo-48-11-2425",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://cdn.shopify.com/s/files/1/0933/1582/5958/files/2367-20-PROMO-48-11-2425.jpg?v=1793915077&width=480"
  },
  {
   "slug": "dewalt-dcf512-atomic-extended-reach-ratchet-kit",
@@ -146,7 +154,8 @@
   "condition": null,
   "source": "https://www.toolnut.com/products/dewalt-dcf512eb-20v-max-atomic-brushless-1-2-in-extended-reach-ratchet-3-5-ah-powerstack-kit",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://cdn.shopify.com/s/files/1/0933/1582/5958/files/DCF512EB-PROMO-DCBP320C.jpg?v=1779805098&width=480"
  },
  {
   "slug": "dewalt-dcg422b-right-angle-die-grinder-battery",
@@ -162,7 +171,8 @@
   "condition": null,
   "source": "https://www.toolnut.com/products/dewalt-dcg422b-atomic-right-angle-die-grinder-with-dcb240-4ah-battery",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://cdn.shopify.com/s/files/1/0933/1582/5958/files/DCG422B-DCB240.jpg?v=1792009692&width=480"
  },
  {
   "slug": "dewalt-dcf787c1-impact-driver-kit",
@@ -183,7 +193,8 @@
   "source": "https://www.toolnut.com/products/dewalt-dcf787c1-20v-max-brushless-1-4-in-impact-driver-3-5ah-1-5ah-kit",
   "checked_at": "2026-11-19T18:50:00-06:00",
   "truck_checked_at": "2026-11-19T19:05:00-06:00",
-  "featured": true
+  "featured": true,
+  "image_url": "https://cdn.shopify.com/s/files/1/0933/1582/5958/files/dewalt_dcf787c1-dcbp320c.jpg?v=1779804782&width=480"
  },
  {
   "slug": "dewalt-dcb205-5ah-battery-4-pack",
@@ -199,7 +210,8 @@
   "condition": null,
   "source": "https://www.toolnut.com/products/dewalt-dcb205-20v-max-5-0ah-lithium-ion-batteries-4-pack",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://cdn.shopify.com/s/files/1/0933/1582/5958/files/DCB205-2-4pk.jpg?v=1781295535&width=480"
  },
  {
   "slug": "knipex-85-51-250-c-click-hose-clamp-pliers",
@@ -220,7 +232,8 @@
   "source": "https://www.toolnut.com/products/knipex-10-in-hose-clamp-pliers-for-click-clamps-with-rotating-tips-85-51-250-c-sba",
   "checked_at": "2026-11-19T18:50:00-06:00",
   "truck_checked_at": "2026-11-19T19:05:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://cdn.shopify.com/s/files/1/0933/1582/5958/files/2026052159_1.jpg?v=1779327383&width=480"
  },
  {
   "slug": "knipex-46-11-a0-external-circlip-pliers",
@@ -236,7 +249,8 @@
   "condition": null,
   "source": "https://www.toolnut.com/products/knipex-5-75-in-external-straight-tip-circlip-pliers-for-3-10-mm-shafts-46-11-a0-sba",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://cdn.shopify.com/s/files/1/0933/1582/5958/files/2026052146_1.jpg?v=1779327381&width=480"
  },
  {
   "slug": "knipex-cobra-es-87-51-180",
@@ -257,7 +271,8 @@
   "source": "https://www.toolnut.com/products/knipex-cobra-es-7-1-4-in-water-pump-tongue-groove-pliers-with-narrow-jaws-87-51-180",
   "checked_at": "2026-11-19T18:50:00-06:00",
   "truck_checked_at": "2026-11-19T19:05:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://cdn.shopify.com/s/files/1/0933/1582/5958/files/20260526036_1.jpg?v=1779887801&width=480"
  },
  {
   "slug": "wera-075790-click-torque-wheel-change-set",
@@ -273,7 +288,8 @@
   "condition": null,
   "source": "https://www.kctool.com/products/wera-075790-click-torque-lock-c-3-car-wheel-change-set-5-pieces",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://cdn.shopify.com/s/files/1/0785/7789/3605/files/wera-075790-click-torque-lock-c-3-car-wheel-change-set-5-pieces-4624403.jpg?v=1775236807&width=480"
  },
  {
   "slug": "wera-joker-11-long-ratcheting-wrench-set",
@@ -289,7 +305,8 @@
   "condition": null,
   "source": "https://www.kctool.com/products/wera-020382-6007-joker-11-long-design-ratcheting-metric-combination-wrench-set-11-pieces-8-19-mm",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://cdn.shopify.com/s/files/1/0785/7789/3605/files/wera-020382-6007-joker-11-long-design-ratcheting-metric-combination-wrench-set-11-pieces-8-19-mm-2138832.jpg?v=1775236755&width=480"
  },
  {
   "slug": "wera-zyklop-impaktor-deep-socket-set",
@@ -305,7 +322,8 @@
   "condition": null,
   "source": "https://www.kctool.com/products/wera-150118-9728-foam-insert-zyklop-b-3-8-impaktor-deep-socket-set-1-14-pieces",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://cdn.shopify.com/s/files/1/0785/7789/3605/files/wera-150118-9728-foam-insert-zyklop-b-38-impaktor-deep-socket-set-1-14-pieces-5674550.jpg?v=1775236756&width=480"
  },
  {
   "slug": "wera-6004-joker-2-self-setting-wrench-set",
@@ -321,7 +339,8 @@
   "condition": null,
   "source": "https://www.kctool.com/products/wera-343820-6004-joker-2-set-1-self-setting-wrench-set-2-pieces",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://cdn.shopify.com/s/files/1/0785/7789/3605/files/wera-343820-6004-joker-2-set-1-self-setting-wrench-set-2-pieces-9712012.jpg?v=1775236753&width=480"
  },
  {
   "slug": "stahlwille-10-5-open-end-wrench-set",
@@ -337,7 +356,8 @@
   "condition": null,
   "source": "https://www.kctool.com/products/stahlwille-10-5-motor-double-open-ended-spanner-set-metric-8-19-mm-5-pieces",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://cdn.shopify.com/s/files/1/0785/7789/3605/files/stahlwille-105-motor-double-open-ended-spanner-set-metric-8-19-mm-5-pieces-6889313.jpg?v=1783675576&width=480"
  },
  {
   "slug": "stahlwille-17f-ratcheting-wrench-14mm",
@@ -353,7 +373,8 @@
   "condition": null,
   "source": "https://www.kctool.com/products/stahlwille-17f-combination-ratcheting-spanner-12-point-14-mm",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://cdn.shopify.com/s/files/1/0785/7789/3605/files/stahlwille-17f-combination-ratcheting-spanner-12-point-14-mm-1411738.jpg?v=1783681408&width=480"
  },
  {
   "slug": "hazet-9012m-1-extra-short-impact-wrench",
@@ -369,7 +390,8 @@
   "condition": null,
   "source": "https://www.kctool.com/products/hazet-9012m-1-extra-short-impact-wrench-1-2-drive-1200-nm",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://cdn.shopify.com/s/files/1/0785/7789/3605/files/hazet-9012m-1-extra-short-impact-wrench-12-drive-1200-nm-5080100.jpg?v=1783674854&width=480"
  },
  {
   "slug": "hazet-2152-600-multimeter",
@@ -390,7 +412,8 @@
   "source": "https://www.kctool.com/products/hazet-2152-600-multimeter",
   "checked_at": "2026-11-19T18:50:00-06:00",
   "truck_checked_at": "2026-11-19T19:05:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://cdn.shopify.com/s/files/1/0785/7789/3605/files/hazet-2152-600-multimeter-7256461.jpg?v=1783678512&width=480"
  },
  {
   "slug": "hazet-195n-2-mechanics-creeper",
@@ -411,7 +434,8 @@
   "source": "https://www.kctool.com/products/hazet-195n-2-mechanics-creeper",
   "checked_at": "2026-11-19T18:50:00-06:00",
   "truck_checked_at": "2026-11-19T19:05:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://cdn.shopify.com/s/files/1/0785/7789/3605/files/hazet-195n-2-mechanics-creeper-8478374.jpg?v=1783678871&width=480"
  },
  {
   "slug": "gedore-671-m-003-bit-ratchet-set",
@@ -427,7 +451,8 @@
   "condition": null,
   "source": "https://www.kctool.com/products/gedore-671-m-003-multifunctional-bit-ratchet-set-3-pieces",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://cdn.shopify.com/s/files/1/0785/7789/3605/files/gedore-671-m-003-multifunctional-bit-ratchet-set-3-pieces-1801951.jpg?v=1790891947&width=480"
  },
  {
   "slug": "hazet-1992n-1-thermal-camera",
@@ -443,7 +468,8 @@
   "condition": null,
   "source": "https://www.kctool.com/products/hazet-1992n-1-thermal-camera",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://cdn.shopify.com/s/files/1/0785/7789/3605/files/hazet-1992n-1-thermal-camera-4641661.jpg?v=1783677247&width=480"
  },
  {
   "slug": "tekton-shb92302-bit-socket-set-outlet",
@@ -459,7 +485,8 @@
   "condition": "Outlet: discontinued",
   "source": "https://www.tekton.com/1-2-inch-drive-hex-torx-phillips-slotted-bit-socket-set-shb92302",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://images.tekton.com/assets/tekton-bit-socket-set-shb92302_front.jpg?width=480"
  },
  {
   "slug": "tekton-trq99903-split-beam-torque-set-outlet",
@@ -480,7 +507,8 @@
   "source": "https://www.tekton.com/3-8-1-2-inch-drive-split-beam-torque-wrench-set-trq99903",
   "checked_at": "2026-11-19T18:50:00-06:00",
   "truck_checked_at": "2026-11-19T19:05:00-06:00",
-  "featured": true
+  "featured": true,
+  "image_url": "https://images.tekton.com/assets/tekton-torque-wrench-set-trq99903_angle.jpg?width=480"
  },
  {
   "slug": "tekton-dhd91201-nut-driver-set-outlet",
@@ -496,7 +524,8 @@
   "condition": "Outlet: discontinued",
   "source": "https://www.tekton.com/high-torque-nut-driver-set-dhd91201",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://images.tekton.com/assets/tekton-nut-driver-set-dhd91201_front.jpg?width=480"
  },
  {
   "slug": "tekton-dbh93102-security-bit-set-outlet",
@@ -512,7 +541,8 @@
   "condition": "Outlet: discontinued",
   "source": "https://www.tekton.com/1-4-inch-security-bit-driver-and-bit-set-with-case-37-piece-dbh93102",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://images.tekton.com/assets/tekton-bit-set-set-dbh93102_front.jpg?width=480"
  },
  {
   "slug": "gearwrench-86830-gearbox-double-flex-metric",
@@ -528,7 +558,8 @@
   "condition": null,
   "source": "https://www.amazon.com/dp/B09PCZRFZK",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": true
+  "featured": true,
+  "image_url": "https://m.media-amazon.com/images/I/61vFCAepZyL._AC_SL500_.jpg"
  },
  {
   "slug": "gearwrench-89095-65pc-impact-socket-set",
@@ -544,7 +575,8 @@
   "condition": null,
   "source": "https://www.amazon.com/dp/B09FH7KD8Y",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://m.media-amazon.com/images/I/71nJLr849IL._AC_SL500_.jpg"
  },
  {
   "slug": "gearwrench-86529-83pc-90t-mechanics-set",
@@ -560,7 +592,8 @@
   "condition": null,
   "source": "https://www.amazon.com/dp/B09NP89YNS",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://m.media-amazon.com/images/I/81TumlXQPrL._AC_SL500_.jpg"
  },
  {
   "slug": "gearwrench-gwmsiskmm-66pc-metric-impact-sockets",
@@ -576,7 +609,8 @@
   "condition": null,
   "source": "https://www.amazon.com/dp/B0CJCS3GV8",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://m.media-amazon.com/images/I/81qbff5SYpL._AC_SL500_.jpg"
  },
  {
   "slug": "sunex-2644-universal-impact-socket-set",
@@ -592,7 +626,8 @@
   "condition": null,
   "source": "https://www.amazon.com/dp/B002MW2CIC",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://m.media-amazon.com/images/I/81iwJPvuA0L._AC_SL500_.jpg"
  },
  {
   "slug": "capri-75-degree-deep-offset-box-wrench-set",
@@ -608,7 +643,8 @@
   "condition": null,
   "source": "https://www.amazon.com/dp/B08WH8NWGL",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://m.media-amazon.com/images/I/61NR1dVB8DL._AC_SL500_.jpg"
  },
  {
   "slug": "capri-combination-wrench-set-metric-19pc",
@@ -624,7 +660,8 @@
   "condition": null,
   "source": "https://www.amazon.com/dp/B07XGN9896",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://m.media-amazon.com/images/I/81g-Ei-+2-L._AC_SL500_.jpg"
  },
  {
   "slug": "capri-cp21029-vacuum-brake-bleeder",
@@ -640,7 +677,8 @@
   "condition": null,
   "source": "https://www.amazon.com/dp/B00OM751EC",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://m.media-amazon.com/images/I/71WIPaWXZOL._AC_SL500_.jpg"
  },
  {
   "slug": "koken-14145pm-22mm-wheel-nut-socket",
@@ -656,7 +694,8 @@
   "condition": null,
   "source": "https://www.amazon.com/dp/B003B3AULM",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://m.media-amazon.com/images/I/41Bm7evCnRL._AC_SL500_.jpg"
  },
  {
   "slug": "gearwrench-41850-body-clip-plier-set",
@@ -672,7 +711,8 @@
   "condition": null,
   "source": "https://www.amazon.com/dp/B000TDAHYM",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://m.media-amazon.com/images/I/71Z-LyG92ES._AC_SL500_.jpg"
  },
  {
   "slug": "ancel-ad310-obd2-code-reader",
@@ -688,7 +728,8 @@
   "condition": null,
   "source": "https://www.amazon.com/dp/B01G5EA74I",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://m.media-amazon.com/images/I/61KElcCN4BL._AC_SL500_.jpg"
  },
  {
   "slug": "knipex-cobra-87-01-125-5in",
@@ -704,7 +745,8 @@
   "condition": null,
   "source": "https://www.amazon.com/dp/B005EXOKKE",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://m.media-amazon.com/images/I/716WlNK54AL._AC_SL500_.jpg"
  },
  {
   "slug": "gearwrench-gwmbs39xps-microdriver-set",
@@ -720,6 +762,7 @@
   "condition": null,
   "source": "https://www.amazon.com/dp/B0D96R49GS",
   "checked_at": "2026-11-19T18:50:00-06:00",
-  "featured": false
+  "featured": false,
+  "image_url": "https://m.media-amazon.com/images/I/712Rk0oFXEL._AC_SL500_.jpg"
  }
 ]

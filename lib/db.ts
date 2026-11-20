@@ -49,6 +49,7 @@ create table if not exists entries (
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
+alter table entries add column if not exists image_url text;
 create table if not exists submissions (
   id serial primary key,
   title text not null,
@@ -135,6 +136,7 @@ async function init(sql: Sql) {
           list_price_label: d.list_price_label ?? "List price", condition: d.condition ?? null, notes: d.notes ?? null,
           truck_brand: d.truck_brand ?? null, truck_title: d.truck_title ?? null, truck_price: d.truck_price ?? null,
           truck_url: d.truck_url ?? null, truck_checked_at: d.truck_checked_at ?? null, checked_at: d.checked_at, featured: d.featured ?? false,
+          image_url: d.image_url ?? null,
         } as never
       )} on conflict (slug) do nothing`;
     }
