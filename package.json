@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "email:render": "npx tsx --tsconfig scripts/tsconfig.json scripts/render-newsletter.tsx"
+    "email:render": "npx tsx --tsconfig scripts/tsconfig.json scripts/render-newsletter.tsx",
+    "email:daily": "npx tsx --tsconfig scripts/tsconfig.json scripts/render-daily.tsx"
   },
   "dependencies": {
     "@react-email/components": "^0.5.0",
