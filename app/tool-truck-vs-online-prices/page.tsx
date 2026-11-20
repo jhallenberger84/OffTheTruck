@@ -54,7 +54,6 @@ export default async function TruckVsOnline() {
           <>
             <p className="mb-4">
               Right now {cheaperOnline.length} of {rows.length} are cheaper online and {cheaperTruck.length} {cheaperTruck.length === 1 ? "is" : "are"} cheaper on the Mac Tools site.
-              {cheaperOnline.length ? ` The biggest gap is ${usd(cheaperOnline[0].save)} on the ${cheaperOnline[0].d.title}.` : ""}
               {" "}Read the model names on each card: some pairs are the same tool and some are the closest comparable one, not an identical part number.
             </p>
             <DealGrid deals={rows.map((r) => r.d)} />
