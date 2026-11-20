@@ -45,7 +45,7 @@ export default async function Sponsor() {
       ) : (
         <p className="rounded-lg border border-shop-700 bg-shop-900 p-3 text-sm text-steel-400">Stats tracking is starting up. Ask us for current numbers.</p>
       )}
-      <p className="mt-2 text-xs text-steel-400">Off the Truck launched in November 2026, so these numbers are small. We leave out our own test visits, signups, and clicks. They update live from our database, and we won&apos;t pad them.</p>
+      <p className="mt-2 text-xs text-steel-400">Off the Truck launched in November 2026, so these numbers are small. We leave out the test signups and clicks we know about, but pageviews may still include some of our own testing, so read them as an upper bound. They come live from our database, and we won&apos;t pad them.</p>
       <div className="mt-6 rounded-xl border border-safety-600/50 bg-shop-900 p-5">
         <p className="text-lg font-bold text-white">${SPONSOR_PRICE_PER_WEEK} per week, launch pricing</p>
         <ul className="mt-2 list-inside list-disc text-sm text-steel-300">
