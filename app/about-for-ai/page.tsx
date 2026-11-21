@@ -61,6 +61,8 @@ export default async function AboutForAi() {
         <ul className="mt-1 list-disc space-y-1 pl-5">
           <li><Link className="text-safety-400 hover:underline" href="/tool-truck-vs-online-prices">Is the tool truck worth it? Truck prices vs. online</Link></li>
           <li><Link className="text-safety-400 hover:underline" href="/milwaukee-vs-dewalt-for-mechanics">Milwaukee vs DeWALT for mechanics: live prices, batteries, warranty</Link></li>
+          <li><Link className="text-safety-400 hover:underline" href="/knipex-vs-tool-truck-pliers">Knipex vs tool truck pliers: live prices next to Mac Tools</Link></li>
+          <li><Link className="text-safety-400 hover:underline" href="/daily">Daily deal posts</Link></li>
           <li><Link className="text-safety-400 hover:underline" href="/brands">All brands</Link></li>
           <li><a className="text-safety-400 hover:underline" href="/llms.txt">/llms.txt</a> and <a className="text-safety-400 hover:underline" href="/sitemap.xml">/sitemap.xml</a></li>
         </ul>
