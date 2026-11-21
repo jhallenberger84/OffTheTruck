@@ -82,7 +82,7 @@ export function DealCard({ d, rank }: { d: Deal; rank?: number }) {
         {off > 0 ? (
           <span className="absolute right-2 top-2 flex h-14 w-14 rotate-6 flex-col items-center justify-center rounded-full bg-safety-500 text-black shadow-md ring-2 ring-black/80">
             <span className="text-lg font-black leading-none">{off}%</span>
-            <span className="text-[10px] font-bold uppercase leading-none">off</span>
+            <span className="text-[11px] font-bold uppercase leading-none">off</span>
           </span>
         ) : null}
         {d.condition ? (
