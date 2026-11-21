@@ -119,7 +119,7 @@ export function DealCard({ d, rank }: { d: Deal; rank?: number }) {
             <span className="font-semibold text-steel-300">{d.retailer}</span> · checked {checked(d.checked_at)}
           </span>
           <a href={`/go/${d.slug}`} rel="nofollow sponsored noopener" target="_blank" className="inline-flex shrink-0 items-center gap-1 rounded-md bg-safety-500 px-3 py-2 text-sm font-black uppercase tracking-wide text-black hover:bg-safety-400">
-            See deal <ArrowIcon className="h-4 w-4" />
+            Check price <ArrowIcon className="h-4 w-4" />
           </a>
         </div>
       </div>
