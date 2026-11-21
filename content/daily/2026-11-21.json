@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-21",
+  "subject": "Tekton 2-pc split beam torque set $216.75 vs. one Mac wrench $459.99",
+  "summary": "Tekton's 3/8\" + 1/2\" split beam torque wrench set is $216.75 on Tekton's outlet, while Mac Tools lists one split beam wrench at $459.99.",
+  "body": [
+    "Today's pick: Tekton's 3/8\" + 1/2\" drive flex-head split beam torque wrench set (TRQ99903, 2 wrenches) is $216.75 on Tekton's outlet, down from $255. It's a discontinued model, so when it's gone, it's gone. Mac Tools lists its TWV250P split beam torque wrench, one wrench, at $459.99. That's two wrenches for $243 less than one off the truck. Check the torque ranges against the work you do before you buy.",
+    "Also worth a look: the Hazet 2152-600 multimeter is $179.62 at KC Tool. Mac's EM730 Pro digital multimeter is $299.99. Different meters, so compare the features you actually use.",
+    "Every deal we track is at offthetruckhq.com."
+  ],
+  "deals": [
+    {
+      "slug": "tekton-trq99903-split-beam-torque-set-outlet",
+      "title": "Tekton 3/8\" + 1/2\" Drive 72-Tooth Flex Head Split Beam Torque Wrench Set, 2 pc (TRQ99903)",
+      "retailer": "Tekton Outlet",
+      "sale_price": 216.75,
+      "list_price": 255,
+      "source_url": "https://www.tekton.com/3-8-1-2-inch-drive-split-beam-torque-wrench-set-trq99903",
+      "truck_brand": "Mac Tools",
+      "truck_title": "Mac Tools TWV250P Split Beam Torque Wrench (one wrench)",
+      "truck_price": 459.99,
+      "truck_url": "https://www.mactools.com/products/twv250p",
+      "checked_at": "2026-11-21T12:01:56.219Z"
+    },
+    {
+      "slug": "hazet-2152-600-multimeter",
+      "title": "Hazet 2152-600 Multimeter",
+      "retailer": "KC Tool",
+      "sale_price": 179.62,
+      "source_url": "https://www.kctool.com/products/hazet-2152-600-multimeter",
+      "truck_brand": "Mac Tools",
+      "truck_title": "Mac Tools EM730 Pro Digital Multimeter",
+      "truck_price": 299.99,
+      "truck_url": "https://www.mactools.com/products/em730",
+      "checked_at": "2026-11-21T12:01:56.219Z"
+    }
+  ]
+}
