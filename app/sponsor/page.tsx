@@ -1,5 +1,5 @@
 import { SponsorInquiryForm } from "@/components/Forms";
-import { getStats } from "@/lib/stats";
+import { getStats, publicHumanClicks } from "@/lib/stats";
 import { SPONSOR_PRICE_PER_WEEK } from "@/lib/site";
 import { logError } from "@/lib/db";
 
@@ -14,15 +14,17 @@ export default async function Sponsor() {
     await logError("sponsor.stats", e);
   }
   const fmt = (n: number) => n.toLocaleString("en-US");
-  // Known test rows from launch day (2026-11-19), not real readers: the owner's own signup (1),
-  // one test pageview (1), one test deal click (1), and a link-checker click spike (44).
-  const TEST = { subscribers: 1, pageviews: 1, clicks: 45 };
+  // Known test rows from launch day (2026-11-19), not real readers: the owner's own signup (1)
+  // and one test pageview (1). Historical deal clicks are not shown: most were bots or link
+  // checkers, and older rows have no user agent, so we can't honestly count them as human.
+  const TEST = { subscribers: 1, pageviews: 1 };
   const real = (n: number, t: number) => fmt(Math.max(0, n - t));
+  const shownClicks = stats?.db ? publicHumanClicks(stats.outboundClicks30d) : null;
   const cells = stats?.db
     ? [
         ["Email subscribers", real(stats.subscribers, TEST.subscribers)],
         ["Pageviews since launch (Nov 19, 2026)", real(stats.pageviews30d, TEST.pageviews)],
-        ["Deal clicks since launch", real(stats.outboundClicks30d, TEST.clicks)],
+        ...(shownClicks !== null ? [["Deal clicks from real visitors", fmt(shownClicks)] as [string, string]] : []),
         ["Live deals tracked", fmt(stats.liveDeals)],
       ]
     : null;
@@ -45,7 +47,7 @@ export default async function Sponsor() {
       ) : (
         <p className="rounded-lg border border-shop-700 bg-shop-900 p-3 text-sm text-steel-400">Stats tracking is starting up. Ask us for current numbers.</p>
       )}
-      <p className="mt-2 text-xs text-steel-400">Off the Truck launched in November 2026, so these numbers are small. We leave out the test signups and clicks we know about, but pageviews may still include some of our own testing, so read them as an upper bound. They come live from our database, and we won&apos;t pad them.</p>
+      <p className="mt-2 text-xs text-steel-400">Off the Truck launched in November 2026, so these numbers are small. We leave out the test signup and test pageview we know about. Deal clicks aren&apos;t listed yet: most recorded clicks so far were bots or link checkers, and we didn&apos;t store user agents on older clicks, so we can&apos;t honestly separate them. Going forward we only count real visitor clicks, and we&apos;ll show that number once it&apos;s big enough to mean something. Pageviews may still include some of our own untagged testing and automated traffic (we skip our tagged test visits, but pageviews are stored as daily totals without a user agent, so we can&apos;t split them the same way). Read them as an upper bound. They come live from our database, and we won&apos;t pad them.</p>
       <div className="mt-6 rounded-xl border border-safety-600/50 bg-shop-900 p-5">
         <p className="text-lg font-bold text-white">${SPONSOR_PRICE_PER_WEEK} per week, launch pricing</p>
         <ul className="mt-2 list-inside list-disc text-sm text-steel-300">

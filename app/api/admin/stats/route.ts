@@ -11,7 +11,13 @@ export async function GET(req: Request) {
   const sql = await db();
   let extra = {};
   if (sql) {
-    const topClicks = await sql`select slug, count(*)::int as clicks from outbound_clicks where created_at > now() - interval '30 days' group by slug order by clicks desc limit 10`;
+    const topClicks = await sql`select slug,
+      count(*) filter (where is_bot is false)::int as clicks,
+      count(*) filter (where is_bot is true)::int as clicks_bot,
+      count(*) filter (where is_bot is null)::int as clicks_unknown,
+      count(*)::int as clicks_raw
+      from outbound_clicks where created_at > now() - interval '30 days'
+      group by slug order by clicks_raw desc limit 10`;
     const topPages = await sql`select path, sum(views)::int as views from pageviews where day > current_date - 30 group by path order by views desc limit 10`;
     const recentErrors = await sql`select context, message, created_at from errors order by created_at desc limit 10`;
     extra = { topClicks, topPages, recentErrors };

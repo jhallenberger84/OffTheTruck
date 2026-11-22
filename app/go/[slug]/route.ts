@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { db, logError } from "@/lib/db";
 import { isInternal } from "@/lib/internal";
+import { isBotUserAgent, storedUserAgent } from "@/lib/bot";
 import { getDealBySlug } from "@/lib/deals";
 import { outboundUrl } from "@/lib/affiliate";
 import { activeSponsor } from "@/lib/sponsor";
@@ -11,12 +12,16 @@ export async function GET(req: Request, { params }: { params: Promise<{ slug: st
   const { slug } = await params;
   const internal = isInternal(req.headers);
   const referrer = (req.headers.get("referer") || "").slice(0, 300) || null;
+  const userAgent = storedUserAgent(req.headers.get("user-agent"));
+  const isBot = isBotUserAgent(userAgent);
 
   if (slug === "sponsor") {
     const s = await activeSponsor();
     try {
       const sql = await db();
-      if (sql && !internal) await sql`insert into sponsor_clicks (sponsor_week_id, placement) values (${s?.id ?? null}, ${new URL(req.url).searchParams.get("p") || "bar"})`;
+      if (sql && !internal) {
+        await sql`insert into sponsor_clicks (sponsor_week_id, placement, is_bot, user_agent) values (${s?.id ?? null}, ${new URL(req.url).searchParams.get("p") || "bar"}, ${isBot}, ${userAgent})`;
+      }
     } catch (e) {
       await logError("go.sponsor", e);
     }
@@ -27,7 +32,9 @@ export async function GET(req: Request, { params }: { params: Promise<{ slug: st
   if (!deal) return NextResponse.redirect(new URL("/", req.url), 302);
   try {
     const sql = await db();
-    if (sql && !internal) await sql`insert into outbound_clicks (slug, entry_id, referrer) values (${slug}, ${deal.id ?? null}, ${referrer})`;
+    if (sql && !internal) {
+      await sql`insert into outbound_clicks (slug, entry_id, referrer, is_bot, user_agent) values (${slug}, ${deal.id ?? null}, ${referrer}, ${isBot}, ${userAgent})`;
+    }
   } catch (e) {
     await logError("go.click", e);
   }

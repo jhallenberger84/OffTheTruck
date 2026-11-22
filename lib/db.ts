@@ -109,6 +109,9 @@ create table if not exists sponsor_clicks (
   placement text,
   created_at timestamptz not null default now()
 );
+alter table sponsor_clicks add column if not exists is_bot boolean;
+alter table sponsor_clicks alter column is_bot set default false;
+alter table sponsor_clicks add column if not exists user_agent text;
 create table if not exists outbound_clicks (
   id serial primary key,
   slug text not null,
@@ -116,6 +119,9 @@ create table if not exists outbound_clicks (
   referrer text,
   created_at timestamptz not null default now()
 );
+alter table outbound_clicks add column if not exists is_bot boolean;
+alter table outbound_clicks alter column is_bot set default false;
+alter table outbound_clicks add column if not exists user_agent text;
 create table if not exists errors (
   id serial primary key,
   context text not null,
