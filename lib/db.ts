@@ -1,5 +1,6 @@
 import postgres from "postgres";
 import seed from "./seed.json";
+import { isBotUserAgent } from "./bot";
 
 type Sql = ReturnType<typeof postgres>;
 
@@ -130,6 +131,29 @@ create table if not exists errors (
 );
 `;
 
+
+/** Correct rows flagged as bot only because of an in-app browser UA. Idempotent; does not delete rows. */
+async function reclassifyInAppClicks(sql: Sql): Promise<{ outbound: number; sponsor: number }> {
+  let outbound = 0;
+  let sponsor = 0;
+  const deal = await sql`select id, user_agent from outbound_clicks where is_bot is true and user_agent is not null`;
+  for (const row of deal) {
+    if (!isBotUserAgent(row.user_agent as string | null)) {
+      await sql`update outbound_clicks set is_bot = false where id = ${row.id} and is_bot is true`;
+      outbound++;
+    }
+  }
+  const sp = await sql`select id, user_agent from sponsor_clicks where is_bot is true and user_agent is not null`;
+  for (const row of sp) {
+    if (!isBotUserAgent(row.user_agent as string | null)) {
+      await sql`update sponsor_clicks set is_bot = false where id = ${row.id} and is_bot is true`;
+      sponsor++;
+    }
+  }
+  if (outbound || sponsor) console.log(`[ott] reclassified in-app clicks outbound=${outbound} sponsor=${sponsor}`);
+  return { outbound, sponsor };
+}
+
 async function init(sql: Sql) {
   await sql.unsafe(SCHEMA);
   const [{ n }] = await sql`select count(*)::int as n from entries`;
@@ -147,6 +171,7 @@ async function init(sql: Sql) {
       )} on conflict (slug) do nothing`;
     }
   }
+  await reclassifyInAppClicks(sql);
 }
 
 /** Returns a ready SQL client (schema created and seeded once per instance), or null when no database is configured. */
