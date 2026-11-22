@@ -50,10 +50,10 @@ export function SignupForm({ source = "site", compact = false }: { source?: stri
         <input type="hidden" name="source" value={source} />
         <Honeypot />
         <button disabled={state.status === "sending"} className="shrink-0 rounded-md bg-safety-500 px-4 py-2 font-bold text-black hover:bg-safety-400 disabled:opacity-60">
-          {state.status === "sending" ? "Adding…" : "Get the Thursday email"}
+          {state.status === "sending" ? "Adding…" : "Get the daily email"}
         </button>
       </div>
-      <Status state={state} okText="You're on the list. First email lands Thursday." />
+      <Status state={state} okText="You're on the list. First email lands tomorrow morning." />
     </form>
   );
 }

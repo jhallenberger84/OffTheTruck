@@ -19,6 +19,6 @@ Mechanic tool deals tracker. Next.js App Router + Tailwind, Postgres (Neon), Res
 - `GET /api/admin/searches?days=30` – zero-result searches
 - `GET|POST|PATCH /api/admin/sponsors` – sponsor weeks + inquiries; POST `{ week_start, sponsor_name, url, headline? }`
 - `GET|POST|PATCH|DELETE /api/admin/deals` – list / add / update (`{ slug, ...fields }`) / expire (`?slug=`)
-- `GET /api/admin/newsletter[?format=json]` – renders this week's email (top 5). Never sends.
+- `GET /api/admin/newsletter[?format=json]` – renders the daily top-5 email preview (top 5 live deals). Never sends.
 
 All outbound deal and sponsor links go through `/go/<slug>` (logged in `outbound_clicks` / `sponsor_clicks`); affiliate tags are applied in `lib/affiliate.ts`.

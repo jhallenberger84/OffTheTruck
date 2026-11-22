@@ -39,5 +39,5 @@ export async function POST(req: Request) {
     await logError("signup.db", e);
   }
   if (!resendOk && !dbOk) return NextResponse.json({ error: "Couldn't add you right now. Please try again in a minute." }, { status: 503 });
-  return NextResponse.json({ ok: true, message: "You're on the list. First email lands Thursday." });
+  return NextResponse.json({ ok: true, message: "You're on the list. First email lands tomorrow morning." });
 }

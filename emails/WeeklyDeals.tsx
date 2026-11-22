@@ -8,7 +8,7 @@ const off = (p: Pick) => Math.round((1 - p.sale_price / p.list_price) * 100);
 export default function WeeklyDeals({
   picks,
   siteUrl = "https://offthetruckhq.com",
-  dateLabel = "This week",
+  dateLabel = "Today",
   sponsor = { name: "your brand here", url: "https://offthetruckhq.com/sponsor" },
 }: {
   picks: Pick[];
@@ -30,7 +30,7 @@ export default function WeeklyDeals({
             <Text style={{ color: "#b9c0c6", fontSize: 13, margin: "2px 0 0" }}>{dateLabel} · the 5 best tool deals</Text>
           </Section>
           <Section style={{ padding: "8px 20px 0" }}>
-            <Heading as="h2" style={{ fontSize: 16, margin: "12px 0 4px", color: "#1a1d20" }}>This week&apos;s 5 picks</Heading>
+            <Heading as="h2" style={{ fontSize: 16, margin: "12px 0 4px", color: "#1a1d20" }}>Today&apos;s 5 picks</Heading>
             {top.map((p, i) => (
               <Text key={p.slug} style={{ fontSize: 14, lineHeight: "20px", margin: "10px 0", color: "#23272b" }}>
                 <strong style={{ color: "#e0560a" }}>{i + 1}.</strong>{" "}

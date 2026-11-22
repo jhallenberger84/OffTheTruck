@@ -30,7 +30,7 @@ export default async function Sponsor() {
     <div className="mx-auto max-w-2xl">
       <h1 className="text-2xl font-black text-white">Sponsor Off the Truck</h1>
       <p className="mt-2 text-steel-300">
-        Off the Truck is a free tool-deals tracker for auto techs and shop folks: working technicians, shop owners, and students who buy their own tools and want to know the price before the truck pulls up. One sponsor per week gets the bar at the top of every page and the &ldquo;Sponsored by&rdquo; line in the Thursday email.
+        Off the Truck is a free tool-deals tracker for auto techs and shop folks: working technicians, shop owners, and students who buy their own tools and want to know the price before the truck pulls up. One sponsor per week gets the bar at the top of every page and the &ldquo;Sponsored by&rdquo; line in the daily email.
       </p>
       <h2 className="mt-6 mb-2 text-sm font-bold uppercase tracking-wide text-steel-400">Real numbers, launched Nov 2026</h2>
       {cells ? (
@@ -50,7 +50,7 @@ export default async function Sponsor() {
         <p className="text-lg font-bold text-white">${SPONSOR_PRICE_PER_WEEK} per week, launch pricing</p>
         <ul className="mt-2 list-inside list-disc text-sm text-steel-300">
           <li>Top bar on every page for 7 days (Monday to Sunday)</li>
-          <li>&ldquo;Sponsored by&rdquo; line in that week&apos;s Thursday email</li>
+          <li>&ldquo;Sponsored by&rdquo; line in that week&apos;s daily emails</li>
           <li>Click report at the end of the week</li>
         </ul>
         <p className="mt-3 text-sm font-semibold text-white">How to book</p>

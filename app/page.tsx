@@ -39,7 +39,7 @@ export default async function Home() {
               <a href="#deals" className="rounded-md bg-safety-500 px-5 py-3 text-sm font-black uppercase tracking-wide text-black shadow-lg shadow-black/40 hover:bg-safety-400">See today&apos;s deals</a>
             </div>
             <div id="hero-signup" className="mt-5 max-w-md rounded-lg bg-black/45 p-3 ring-1 ring-white/10">
-              <p className="mb-2 text-sm font-semibold text-white">Get the 5 best deals in one short email every Thursday. No spam, unsubscribe anytime.</p>
+              <p className="mb-2 text-sm font-semibold text-white">Get the 5 best deals in one short email every day. No spam, unsubscribe anytime.</p>
               <SignupForm source="home-hero" />
             </div>
             <dl className="mt-6 grid max-w-lg grid-cols-3 gap-2 text-center">

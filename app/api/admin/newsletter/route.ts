@@ -9,7 +9,7 @@ import { SITE_URL } from "@/lib/site";
 export const dynamic = "force-dynamic";
 
 /**
- * GET /api/admin/newsletter           -> rendered HTML of this week's email (top 5 live deals)
+ * GET /api/admin/newsletter           -> rendered HTML of the daily top-5 email (top 5 live deals)
  * GET /api/admin/newsletter?format=json -> { subject, html, text, picks } ready for a Resend Broadcast.
  * This endpoint never sends anything.
  */
