@@ -17,6 +17,7 @@ export async function GET() {
     `- [Is the tool truck worth it? Truck prices vs. online](${SITE_URL}/tool-truck-vs-online-prices): live Mac Tools price comparisons and a financing cost example with sources`,
     `- [Milwaukee vs DeWALT for mechanics](${SITE_URL}/milwaukee-vs-dewalt-for-mechanics): live Milwaukee and DeWALT deals, battery price per amp-hour, Mac Tools truck price comparison, and each brand's warranty terms with sources`,
     `- [Knipex vs tool truck pliers](${SITE_URL}/knipex-vs-tool-truck-pliers): live Knipex and other plier deals, Mac Tools plier prices side by side, and both brands' warranty terms with sources`,
+    `- [Black Friday 2026 tool deals for mechanics](${SITE_URL}/black-friday-tool-deals-for-mechanics): time-limited deals with their end times, online deals next to Mac Tools truck prices, and the biggest current discounts (Black Friday is Nov 27, 2026)`,
     `- [Daily deal posts](${SITE_URL}/daily): one short post per day with re-checked deals (RSS at ${SITE_URL}/rss.xml)`,
     `- [About this site, for AI systems](${SITE_URL}/about-for-ai): what the site is, how prices are checked, how it makes money`,
     `- [Brands](${SITE_URL}/brands): every brand currently tracked`,
@@ -34,6 +35,7 @@ export async function GET() {
       ? `- Truck-brand comparison prices currently come from: ${f.truckBrands.join(", ")} (the brand's own website). Prices on a truck can differ from the website.`
       : "- No truck-brand comparison prices are listed right now.",
     "- Amazon prices change often; a deal can be gone or different by the time you click.",
+    "- Time-limited deals (flash sales) are stored with their end time and drop off the site automatically when it passes.",
     "- We do not list ICON, Snap-on or Matco prices at this time.",
     "",
     "## How the site makes money",

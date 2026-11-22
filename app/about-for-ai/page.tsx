@@ -49,6 +49,7 @@ export default async function AboutForAi() {
           <li>Each deal comes from the retailer&apos;s own product page. We show the sale price, the retailer&apos;s list or compare-at price (labelled as that), and the date we checked.</li>
           <li>Truck-brand prices come from the truck brand&apos;s own website. A price on the truck itself can be different.</li>
           <li>Amazon prices change often. A deal can be gone or different by the time you click.</li>
+          <li>Time-limited deals (flash sales) are stored with their end time and drop off the site automatically when it passes.</li>
           <li>Some compare-at prices are the retailer&apos;s own number, not a market price. Treat the percent-off as a hint, not a fact.</li>
         </ul>
       </section>
@@ -62,6 +63,7 @@ export default async function AboutForAi() {
           <li><Link className="text-safety-400 hover:underline" href="/tool-truck-vs-online-prices">Is the tool truck worth it? Truck prices vs. online</Link></li>
           <li><Link className="text-safety-400 hover:underline" href="/milwaukee-vs-dewalt-for-mechanics">Milwaukee vs DeWALT for mechanics: live prices, batteries, warranty</Link></li>
           <li><Link className="text-safety-400 hover:underline" href="/knipex-vs-tool-truck-pliers">Knipex vs tool truck pliers: live prices next to Mac Tools</Link></li>
+          <li><Link className="text-safety-400 hover:underline" href="/black-friday-tool-deals-for-mechanics">Black Friday 2026 tool deals for mechanics: live prices vs the truck</Link></li>
           <li><Link className="text-safety-400 hover:underline" href="/daily">Daily deal posts</Link></li>
           <li><Link className="text-safety-400 hover:underline" href="/brands">All brands</Link></li>
           <li><a className="text-safety-400 hover:underline" href="/llms.txt">/llms.txt</a> and <a className="text-safety-400 hover:underline" href="/sitemap.xml">/sitemap.xml</a></li>
