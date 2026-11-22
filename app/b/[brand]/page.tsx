@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { DealGrid } from "@/components/DealCard";
+import { SignupBlock } from "@/components/SignupBlock";
 import { getActiveDeals } from "@/lib/deals";
 import { brandColor } from "@/lib/brands";
 import { brandSlug } from "@/lib/site";
@@ -29,6 +30,7 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
         <div className="h-2 hazard" aria-hidden />
       </section>
       <DealGrid deals={deals} />
+      <SignupBlock source={`brand-${brand}`.slice(0, 40)} />
     </>
   );
 }

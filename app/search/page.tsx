@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { headers } from "next/headers";
 import { DealGrid } from "@/components/DealCard";
+import { SignupBlock } from "@/components/SignupBlock";
 import { db, logError } from "@/lib/db";
 import { isInternal } from "@/lib/internal";
 import { getActiveDeals, searchDeals } from "@/lib/deals";
@@ -33,6 +34,7 @@ export default async function Search({ searchParams }: { searchParams: Promise<{
       ) : (
         <DealGrid deals={results} />
       )}
+      {q ? <SignupBlock source="search" /> : null}
     </>
   );
 }

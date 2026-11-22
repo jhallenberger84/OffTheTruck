@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CategoryChips } from "@/components/CategoryChips";
 import { DealGrid } from "@/components/DealCard";
+import { SignupBlock } from "@/components/SignupBlock";
 import { CategoryIcon } from "@/components/Icons";
 import { getActiveDeals } from "@/lib/deals";
 import { CATEGORIES } from "@/lib/site";
@@ -38,6 +39,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
       </section>
       <div className="mb-5"><CategoryChips deals={all} active={c.slug} /></div>
       {deals.length ? <DealGrid deals={deals} /> : <p className="text-steel-400">No live deals here right now. Check back tomorrow.</p>}
+      <SignupBlock source={`category-${c.slug}`} />
     </>
   );
 }
