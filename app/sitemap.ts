@@ -18,6 +18,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_URL}/tool-truck-vs-online-prices`, lastModified: now, changeFrequency: "daily", priority: 0.8 },
     { url: `${SITE_URL}/milwaukee-vs-dewalt-for-mechanics`, lastModified: now, changeFrequency: "daily", priority: 0.8 },
     { url: `${SITE_URL}/knipex-vs-tool-truck-pliers`, lastModified: now, changeFrequency: "daily", priority: 0.8 },
+    { url: `${SITE_URL}/black-friday-tool-deals-for-mechanics`, lastModified: now, changeFrequency: "daily", priority: 0.8 },
     { url: `${SITE_URL}/about-for-ai`, lastModified: now, changeFrequency: "weekly", priority: 0.4 },
     { url: `${SITE_URL}/submit`, changeFrequency: "monthly", priority: 0.4 },
     { url: `${SITE_URL}/sponsor`, changeFrequency: "monthly", priority: 0.4 },
