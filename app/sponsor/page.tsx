@@ -1,5 +1,5 @@
 import { SponsorInquiryForm } from "@/components/Forms";
-import { getStats, publicHumanClicks } from "@/lib/stats";
+import { getStats } from "@/lib/stats";
 import { SPONSOR_PRICE_PER_WEEK } from "@/lib/site";
 import { logError } from "@/lib/db";
 
@@ -19,7 +19,9 @@ export default async function Sponsor() {
   // checkers, and older rows have no user agent, so we can't honestly count them as human.
   const TEST = { subscribers: 1, pageviews: 1 };
   const real = (n: number, t: number) => fmt(Math.max(0, n - t));
-  const shownClicks = stats?.db ? publicHumanClicks(stats.outboundClicks30d) : null;
+  // 2026-11-22 night: hide the click number again. UA-only "human" clicks (36) far
+  // outran new pageviews (14), so the public figure isn't trustworthy yet.
+  const shownClicks = null;
   const cells = stats?.db
     ? [
         ["Email subscribers", real(stats.subscribers, TEST.subscribers)],
@@ -47,7 +49,7 @@ export default async function Sponsor() {
       ) : (
         <p className="rounded-lg border border-shop-700 bg-shop-900 p-3 text-sm text-steel-400">Stats tracking is starting up. Ask us for current numbers.</p>
       )}
-      <p className="mt-2 text-xs text-steel-400">Off the Truck launched in November 2026, so these numbers are small. We leave out the test signup and test pageview we know about. {shownClicks !== null ? <>Deal clicks only count clicks since November 21, 2026 from browsers we don&apos;t recognize as bots. Older clicks didn&apos;t store a user agent and most were bots or link checkers, so they&apos;re left out. Some automated traffic can still look like a normal browser, so read the click number as an upper bound too. </> : <>Deal clicks aren&apos;t listed yet: most recorded clicks so far were bots or link checkers, and we didn&apos;t store user agents on older clicks, so we can&apos;t honestly separate them. Going forward we only count real visitor clicks, and we&apos;ll show that number once it&apos;s big enough to mean something. </>}Pageviews may still include some of our own untagged testing and automated traffic (we skip our tagged test visits, but pageviews are stored as daily totals without a user agent, so we can&apos;t split them the same way). Read them as an upper bound. They come live from our database, and we won&apos;t pad them.</p>
+      <p className="mt-2 text-xs text-steel-400">Off the Truck launched in November 2026, so these numbers are small. We leave out the test signup and test pageview we know about. {shownClicks !== null ? <>Deal clicks only count clicks since November 21, 2026 from browsers we don&apos;t recognize as bots. Older clicks didn&apos;t store a user agent and most were bots or link checkers, so they&apos;re left out. Some automated traffic can still look like a normal browser, so read the click number as an upper bound too. </> : <>Deal clicks aren&apos;t listed right now. Too many recorded clicks look automated, so we won&apos;t show a number a sponsor can trust until we can count them more carefully. </>}Pageviews may still include some of our own untagged testing and automated traffic (we skip our tagged test visits, but pageviews are stored as daily totals without a user agent, so we can&apos;t split them the same way). Read them as an upper bound. They come live from our database, and we won&apos;t pad them.</p>
       <div className="mt-6 rounded-xl border border-safety-600/50 bg-shop-900 p-5">
         <p className="text-lg font-bold text-white">${SPONSOR_PRICE_PER_WEEK} per week, launch pricing</p>
         <ul className="mt-2 list-inside list-disc text-sm text-steel-300">
