@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { DealGrid } from "@/components/DealCard";
 import { SignupBlock } from "@/components/SignupBlock";
+import { TopSignup } from "@/components/TopSignup";
 import { catalogFacts, fmtDate } from "@/lib/facts";
 import type { Deal } from "@/lib/deals";
 
@@ -43,6 +44,8 @@ export default async function KnipexVsTruckPliers() {
           Short answer: on pliers, the gap between buying online and buying off the truck is small.{truckPairs.length > 0 && <> In the {truckPairs.length} plier pairs we can match today, the biggest difference is {usd(maxGap)}{truckCheaper > 0 ? <>, and in {truckCheaper} of them the Mac Tools price is the lower one</> : null}.</>} So pick pliers for the job they do, not the logo. Below are the Knipex deals we track right now ({knipex.length}), prices last checked {checkedOn}, plus the closest Mac Tools pliers. Every card links to the page the price came from.
         </p>
       </header>
+
+      <TopSignup source="seo-top-knipex-vs-truck-pliers" />
 
       <section aria-labelledby="live">
         <h2 id="live" className="mb-2 text-2xl font-black text-white">Live Knipex deals ({knipex.length})</h2>

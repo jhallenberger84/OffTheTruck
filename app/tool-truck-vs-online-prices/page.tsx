@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { DealGrid } from "@/components/DealCard";
 import { SignupBlock } from "@/components/SignupBlock";
+import { TopSignup } from "@/components/TopSignup";
 import { catalogFacts, fmtDate } from "@/lib/facts";
 
 export const revalidate = 300;
@@ -47,6 +48,8 @@ export default async function TruckVsOnline() {
           Short answer: sometimes, and you can check each tool before you sign for it. Below are the tools we track right now that have a real Mac Tools price next to an online price. Prices were last checked {checkedOn}. Nothing here is a guess; each card links to both pages.
         </p>
       </header>
+
+      <TopSignup source="seo-top-tool-truck-vs-online" />
 
       <section aria-labelledby="live">
         <h2 id="live" className="mb-2 text-2xl font-black text-white">Live: {rows.length} tools with a truck price next to an online price</h2>

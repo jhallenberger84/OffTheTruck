@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { DealGrid } from "@/components/DealCard";
 import { SignupBlock } from "@/components/SignupBlock";
+import { TopSignup } from "@/components/TopSignup";
 import { catalogFacts, fmtDate } from "@/lib/facts";
 import type { Deal } from "@/lib/deals";
 
@@ -48,6 +49,8 @@ export default async function MilwaukeeVsDewalt() {
           Short answer: both are solid cordless platforms, and once you own batteries you&apos;re mostly locked in, so price the batteries and the warranty, not just the tool. Below are the Milwaukee and DeWALT deals we track right now ({mil.length} Milwaukee, {dw.length} DeWALT), prices last checked {checkedOn}. Every card links to the page the price came from.
         </p>
       </header>
+
+      <TopSignup source="seo-top-milwaukee-vs-dewalt" />
 
       <section aria-labelledby="live">
         <h2 id="live" className="mb-2 text-2xl font-black text-white">Live Milwaukee deals ({mil.length})</h2>

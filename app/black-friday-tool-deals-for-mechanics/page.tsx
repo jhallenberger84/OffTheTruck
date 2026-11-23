@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { DealGrid } from "@/components/DealCard";
 import { SignupBlock } from "@/components/SignupBlock";
+import { TopSignup } from "@/components/TopSignup";
 import { catalogFacts, fmtDate } from "@/lib/facts";
 import { pctOff, type Deal } from "@/lib/deals";
 
@@ -60,6 +61,8 @@ export default async function BlackFridayToolDeals() {
           Black Friday is Friday, November 27, 2026, and Cyber Monday is November 30, but retailers are already running sales. This page lists the {f.total} tool deals we track right now, prices last checked {lastChecked}, pulled from the retailer&apos;s own product page. Time-limited deals are at the top with their end time, then the deals we can put next to a real tool-truck price ({truckPairs.length} today, {onlineCheaper} cheaper online), then the biggest discounts. Every card links to the page the price came from.
         </p>
       </header>
+
+      <TopSignup source="seo-top-black-friday" />
 
       <section aria-labelledby="ending">
         <h2 id="ending" className="mb-2 text-2xl font-black text-white">Ending soon ({timed.length})</h2>
