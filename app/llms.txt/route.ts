@@ -18,6 +18,7 @@ export async function GET() {
     `- [Milwaukee vs DeWALT for mechanics](${SITE_URL}/milwaukee-vs-dewalt-for-mechanics): live Milwaukee and DeWALT deals, battery price per amp-hour, Mac Tools truck price comparison, and each brand's warranty terms with sources`,
     `- [Knipex vs tool truck pliers](${SITE_URL}/knipex-vs-tool-truck-pliers): live Knipex and other plier deals, Mac Tools plier prices side by side, and both brands' warranty terms with sources`,
     `- [Black Friday 2026 tool deals for mechanics](${SITE_URL}/black-friday-tool-deals-for-mechanics): time-limited deals with their end times, online deals next to Mac Tools truck prices, and the biggest current discounts (Black Friday is Nov 27, 2026)`,
+    `- [GearWrench vs Tekton for mechanics](${SITE_URL}/gearwrench-vs-tekton-for-mechanics): live GearWrench and Tekton deals, a torque wrench next to a Mac Tools truck price, and both brands' warranty terms (receipts, torque wrenches, bit sockets) with sources`,
     `- [Daily deal posts](${SITE_URL}/daily): one short post per day with re-checked deals (RSS at ${SITE_URL}/rss.xml)`,
     `- [About this site, for AI systems](${SITE_URL}/about-for-ai): what the site is, how prices are checked, how it makes money`,
     `- [Brands](${SITE_URL}/brands): every brand currently tracked`,
