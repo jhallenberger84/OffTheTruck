@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-23",
+  "subject": "DeWALT impact driver kit $278 vs. Mac Tools kit $449.99",
+  "summary": "A DeWALT 20V MAX brushless impact driver kit at $278 next to Mac Tools' impact driver kit at $449.99.",
+  "body": [
+    "Today's pick: the DeWALT 20V MAX brushless 1/4\" impact driver kit (DCF787C1, 3.5Ah + 1.5Ah batteries) is $278 at ToolNut, marked down from $378. Mac Tools lists its MCF886GP1D1 20V MAX 1/4\" brushless impact driver kit at $449.99. That's $171.99 less, about 38%.",
+    "They're different tools, so compare torque, battery platform and warranty before you switch. If you already run DeWALT 20V batteries, this one's easy math.",
+    "Tip: ToolNut posts a new 24-hour doorbuster around 3 AM ET each day, so check back. Every deal we track is at offthetruckhq.com."
+  ],
+  "deals": [
+    {
+      "slug": "dewalt-dcf787c1-impact-driver-kit",
+      "title": "DeWALT 20V MAX Brushless 1/4\" Impact Driver kit with 3.5Ah + 1.5Ah batteries (DCF787C1)",
+      "retailer": "ToolNut",
+      "sale_price": 278,
+      "list_price": 378,
+      "source_url": "https://www.toolnut.com/products/dewalt-dcf787c1-20v-max-brushless-1-4-in-impact-driver-3-5ah-1-5ah-kit",
+      "truck_brand": "Mac Tools",
+      "truck_title": "Mac Tools MCF886GP1D1 20V MAX 1/4\" Hex Brushless Impact Driver Kit",
+      "truck_price": 449.99,
+      "truck_url": "https://www.mactools.com/products/mcf886gp1d1",
+      "checked_at": "2026-11-23T10:44:30.506Z"
+    }
+  ]
+}
