@@ -28,7 +28,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         {/* @ts-expect-error impact verification uses a value attribute */}
         <meta name="impact-site-verification" value="8078fe3d-861f-4e9f-9157-bdcb8845d8da" content="8078fe3d-861f-4e9f-9157-bdcb8845d8da" />
       </head>
-      <body className="min-h-screen font-sans antialiased">
+      <body className="min-h-screen font-sans antialiased print:bg-white">
         <SponsorBar
           text={sponsor ? `Sponsored: ${sponsor.headline || sponsor.sponsor_name}` : "Sponsor Off the Truck: reach techs who buy tools every week"}
           href="/go/sponsor"
