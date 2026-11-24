@@ -41,6 +41,10 @@ export default function DailyEmail({ post, siteUrl = "https://offthetruckhq.com"
                 See all deals on the site
               </Link>
             </Text>
+            <Text style={{ ...p, fontSize: 14 }}>
+              Know a tech who&apos;s about to buy off the truck? Forward this, or send them{" "}
+              <Link href={`${siteUrl}/?utm_source=forward`} style={{ color: "#e0560a" }}>offthetruckhq.com</Link>. That&apos;s how this thing grows.
+            </Text>
           </Section>
           <Hr style={{ borderColor: "#e5e7eb", margin: "8px 20px" }} />
           <Section style={{ padding: "0 20px 16px" }}>
