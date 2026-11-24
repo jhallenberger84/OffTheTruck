@@ -43,6 +43,22 @@ export async function GET(req: Request, { params }: { params: Promise<{ slug: st
     return NextResponse.redirect(s?.url || new URL("/sponsor", req.url), 302);
   }
 
+  if (slug === "amazon-bf") {
+    // Amazon Black Friday landing page with our Associates tag (BF hub box). Logged like a deal click under slug amazon-bf.
+    try {
+      const sql = await db();
+      if (sql && !internal) {
+        await sql`insert into outbound_clicks (slug, entry_id, referrer, is_bot, user_agent, has_prior_pv) values (${slug}, ${null}, ${referrer}, ${isBot}, ${userAgent}, ${hasPriorPv})`;
+      }
+    } catch (e) {
+      await logError("go.amazon-bf", e);
+    }
+    const res = NextResponse.redirect(outboundUrl({ url: "https://www.amazon.com/blackfriday", affiliate_url: null }), 302);
+    res.headers.set("X-Robots-Tag", "noindex, nofollow");
+    res.headers.set("Cache-Control", "no-store");
+    return res;
+  }
+
   const deal = await getDealBySlug(slug);
   if (!deal) return NextResponse.redirect(new URL("/", req.url), 302);
   try {

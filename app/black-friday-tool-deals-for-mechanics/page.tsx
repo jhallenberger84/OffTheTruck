@@ -84,6 +84,12 @@ export default async function BlackFridayToolDeals() {
         )}
       </section>
 
+      <aside className="rounded-xl border border-safety-500/60 bg-shop-900 p-4">
+        <p className="text-sm font-black uppercase tracking-widest text-safety-400">Shopping Amazon&apos;s Black Friday sale anyway?</p>
+        <p className="mt-1 text-sm">Start from this link. Whatever you buy in the next 24 hours, Amazon pays Off the Truck a small cut. Costs you nothing, keeps this site free.</p>
+        <a href="/go/amazon-bf" rel="nofollow sponsored noopener" target="_blank" className="mt-3 inline-flex items-center rounded-md bg-safety-500 px-4 py-2 text-sm font-black uppercase tracking-wide text-black hover:bg-safety-400">Open Amazon Black Friday deals</a>
+      </aside>
+
       {truckPairs.length > 0 && (
         <section aria-labelledby="truck">
           <h2 id="truck" className="mb-2 text-2xl font-black text-white">Online deal vs. the truck price</h2>
