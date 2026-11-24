@@ -125,6 +125,12 @@ alter table outbound_clicks alter column is_bot set default false;
 alter table outbound_clicks add column if not exists user_agent text;
 alter table outbound_clicks add column if not exists has_prior_pv boolean;
 alter table sponsor_clicks add column if not exists has_prior_pv boolean;
+create table if not exists traffic_sources (
+  source text not null,
+  day date not null,
+  views int not null default 0,
+  primary key (source, day)
+);
 create table if not exists visitor_seen (
   vid text primary key,
   last_seen_at timestamptz not null default now()

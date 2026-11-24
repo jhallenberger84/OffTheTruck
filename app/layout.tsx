@@ -45,6 +45,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <Link href="/submit" className="hidden rounded-md border border-safety-500 px-3 py-1.5 text-sm font-semibold text-safety-400 hover:bg-safety-500 hover:text-black sm:block">Submit a deal</Link>
           </div>
           <nav className="mx-auto flex max-w-6xl gap-4 overflow-x-auto px-4 pb-2 text-sm text-steel-300 [scrollbar-width:none]">
+            <Link href="/black-friday-tool-deals-for-mechanics" className="shrink-0 font-bold text-safety-400 hover:text-white">Black Friday</Link>
             {CATEGORIES.map((c) => (
               <Link key={c.slug} href={`/c/${c.slug}`} className="inline-flex shrink-0 items-center gap-1.5 hover:text-white">
                 <CategoryIcon slug={c.slug} className="h-4 w-4 text-safety-500" />
@@ -85,6 +86,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                 <ul className="space-y-2">
                   <li><Link href="/brands" className="hover:text-white">All brands</Link></li>
                   <li><Link href="/daily" className="hover:text-white">Daily deals</Link> · <a href="/rss.xml" className="hover:text-white">RSS</a></li>
+                  <li><Link href="/black-friday-tool-deals-for-mechanics" className="hover:text-white">Black Friday tool deals</Link></li>
+                  <li><Link href="/vs" className="hover:text-white">Truck price vs. online</Link></li>
+                  <li><Link href="/tool-truck-payment-calculator" className="hover:text-white">Truck payment calculator</Link></li>
                   <li><Link href="/submit" className="hover:text-white">Submit a deal</Link></li>
                   <li><Link href="/sponsor" className="hover:text-white">Sponsor Off the Truck</Link></li>
                   <li><Link href="/#signup" className="hover:text-white">Get the daily email</Link></li>

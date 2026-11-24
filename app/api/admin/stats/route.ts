@@ -20,13 +20,14 @@ export async function GET(req: Request) {
       from outbound_clicks where created_at > now() - interval '30 days'
       group by slug order by clicks_raw desc limit 10`;
     const topPages = await sql`select path, sum(views)::int as views from pageviews where day > current_date - 30 group by path order by views desc limit 10`;
+    const topSources = await sql`select source, sum(views)::int as visits from traffic_sources where day > current_date - 30 group by source order by visits desc limit 25`;
     const recentErrors = await sql`select context, message, created_at from errors order by created_at desc limit 10`;
     const recentHumanClicks = await sql`select created_at, slug, user_agent, has_prior_pv
       from outbound_clicks
       where is_bot is false
       order by created_at desc
       limit 50`;
-    extra = { topClicks, topPages, recentErrors, recentHumanClicks };
+    extra = { topClicks, topPages, topSources, recentErrors, recentHumanClicks };
   }
   return NextResponse.json({ ...stats, ...extra });
 }

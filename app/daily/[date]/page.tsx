@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { dailyLabel, getDailyPost, getDailyPosts, usd } from "@/lib/daily";
 import { SignupBlock } from "@/components/SignupBlock";
+import { ShareBar } from "@/components/ShareBar";
 import { TopSignup } from "@/components/TopSignup";
 
 export const dynamicParams = false;
@@ -58,6 +59,7 @@ export default async function DailyPostPage({ params }: { params: Promise<{ date
           </div>
         ))}
       </div>
+      <ShareBar path={`/daily/${p.date}`} text={p.subject} source={`daily-${p.date}`} />
       <p className="mt-6 text-sm"><Link href="/" className="font-semibold text-safety-400 hover:underline">See all deals on Off the Truck →</Link></p>
       <SignupBlock source={`daily-${p.date}`} />
     </article>

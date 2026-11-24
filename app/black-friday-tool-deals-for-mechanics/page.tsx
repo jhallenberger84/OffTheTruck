@@ -3,6 +3,7 @@ import Link from "next/link";
 import { DealGrid } from "@/components/DealCard";
 import { SignupBlock } from "@/components/SignupBlock";
 import { TopSignup } from "@/components/TopSignup";
+import { ShareBar } from "@/components/ShareBar";
 import { catalogFacts, fmtDate } from "@/lib/facts";
 import { pctOff, type Deal } from "@/lib/deals";
 
@@ -139,6 +140,10 @@ export default async function BlackFridayToolDeals() {
         </ul>
         <p className="mt-3">Also see <Link className="text-safety-400 hover:underline" href="/knipex-vs-tool-truck-pliers">Knipex vs tool truck pliers</Link>, the <Link className="text-safety-400 hover:underline" href="/daily">daily deal post</Link>, or <Link className="text-safety-400 hover:underline" href="/">all {f.total} current deals</Link>.</p>
       </section>
+
+      <p className="text-sm text-steel-300">Paying weekly on the truck? <Link className="font-semibold text-safety-400 hover:underline" href="/tool-truck-payment-calculator">Run it through the payment calculator</Link> or see <Link className="font-semibold text-safety-400 hover:underline" href="/vs">every truck vs. online price pair</Link>.</p>
+
+      <ShareBar path={PATH} text="Black Friday tool deals for mechanics, next to the truck price. Checked daily." source="black-friday" />
 
       <section aria-labelledby="sources" className="text-sm">
         <h2 id="sources" className="mb-2 text-xl font-black text-white">Sources</h2>
