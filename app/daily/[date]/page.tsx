@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { dailyLabel, getDailyPost, getDailyPosts, usd } from "@/lib/daily";
 import { SignupBlock } from "@/components/SignupBlock";
+import { TopSignup } from "@/components/TopSignup";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -28,6 +29,9 @@ export default async function DailyPostPage({ params }: { params: Promise<{ date
         <Link href="/daily" className="hover:text-white">Daily deals</Link> · {dailyLabel(p.date)}
       </p>
       <h1 className="mt-1 text-3xl font-black leading-tight text-white">{p.subject}</h1>
+      <div className="mt-4">
+        <TopSignup source={`daily-top-${p.date}`} />
+      </div>
       {p.sponsor && (
         <p className="mt-4 rounded-md bg-safety-500 px-3 py-2 text-sm font-semibold text-black">
           Sponsored by <a href="/go/sponsor?p=daily" rel="sponsored nofollow" className="underline">{p.sponsor.headline || p.sponsor.name}</a>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { dailyLabel, getDailyPosts } from "@/lib/daily";
 import { SignupBlock } from "@/components/SignupBlock";
+import { TopSignup } from "@/components/TopSignup";
 
 export const metadata = {
   title: "Daily deals",
@@ -15,6 +16,9 @@ export default function DailyIndex() {
       <div className="mb-4 flex items-baseline justify-between gap-3">
         <h1 className="text-2xl font-black text-white">Daily deals</h1>
         <a href="/rss.xml" className="text-sm text-safety-400 hover:underline">RSS</a>
+      </div>
+      <div className="mb-4">
+        <TopSignup source="daily-index-top" />
       </div>
       {posts.length === 0 ? (
         <p className="text-steel-300">The first daily post is coming soon. <Link href="/" className="text-safety-400 underline">See today&apos;s deals</Link>.</p>
