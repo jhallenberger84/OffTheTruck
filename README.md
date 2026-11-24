@@ -11,6 +11,7 @@ Mechanic tool deals tracker. Next.js App Router + Tailwind, Postgres (Neon), Res
 | `EMAIL_FROM`, `OWNER_EMAIL` | Owner notifications (deal submissions, sponsor inquiries). |
 | `NEXT_PUBLIC_SITE_URL` | Canonical URL for SEO and email links. |
 | `AMAZON_ASSOCIATE_TAG` | Optional. Added to Amazon links in `/go/<slug>` once the Associates account exists. |
+| `KCTOOL_RFSN` | Optional. Refersion id appended as `rfsn` on kctool.com `/go/<slug>` links. Falls back to `9423510.adea47`. |
 
 ## Admin API (all need `Authorization: Bearer $ADMIN_TOKEN`)
 - `GET /api/admin/stats` – counts, top clicks/pages, recent errors

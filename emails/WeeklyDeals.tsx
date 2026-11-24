@@ -52,7 +52,7 @@ export default function WeeklyDeals({
               Sponsored by <Link href={sponsor.url} style={{ color: "#e0560a" }}>{sponsor.name}</Link>.
             </Text>
             <Text style={{ fontSize: 11, color: "#9ca3af", margin: "4px 0" }}>
-              Prices were checked when this email was written and can change fast. Some links may earn us a commission.{" "}
+              Prices were checked when this email was written and can change fast. Some links may earn us a commission from qualifying purchases at Amazon and other retailers.{" "}
               <Link href={`${siteUrl}/submit`} style={{ color: "#9ca3af" }}>Submit a deal</Link> ·{" "}
               <Link href="{{{RESEND_UNSUBSCRIBE_URL}}}" style={{ color: "#9ca3af" }}>Unsubscribe</Link>
             </Text>

@@ -98,7 +98,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               </div>
               <div>
                 <p className="mb-3 text-xs font-black uppercase tracking-[0.2em] text-safety-400">Fine print</p>
-                <p className="text-xs leading-relaxed text-steel-400">Some links may earn us a commission at no cost to you. As an Amazon Associate I earn from qualifying purchases. Prices change fast, so always confirm on the store page. Truck-brand prices are list prices from the brand&apos;s own site on the date shown.</p>
+                <p className="text-xs leading-relaxed text-steel-400">Some links may earn us a commission at no cost to you. As an Amazon Associate I earn from qualifying purchases. We may also earn from qualifying purchases at other retailers. Prices change fast, so always confirm on the store page. Truck-brand prices are list prices from the brand&apos;s own site on the date shown.</p>
               </div>
             </div>
           </div>
