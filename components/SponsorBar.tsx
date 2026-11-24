@@ -8,7 +8,7 @@ export function SponsorBar({ text, href }: { text: string; href: string }) {
   }, []);
   if (!open) return null;
   return (
-    <div className="relative bg-safety-500 text-black">
+    <div className="relative bg-safety-500 text-black print:hidden">
       <div className="mx-auto flex max-w-6xl items-center justify-center gap-2 px-10 py-1.5 text-center text-sm font-semibold">
         <a href={href} className="underline-offset-2 hover:underline">{text}</a>
       </div>

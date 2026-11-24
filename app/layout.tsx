@@ -33,7 +33,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           text={sponsor ? `Sponsored: ${sponsor.headline || sponsor.sponsor_name}` : "Sponsor Off the Truck: reach techs who buy tools every week"}
           href="/go/sponsor"
         />
-        <header className="border-b border-black bg-shop-900 shadow-lg shadow-black/40">
+        <header className="border-b border-black bg-shop-900 shadow-lg shadow-black/40 print:hidden">
           <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3">
             <Link href="/" className="flex items-center gap-2">
               <LogoMark className="h-8 w-8 shrink-0" />
@@ -57,7 +57,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           </nav>
         </header>
         <main className="mx-auto max-w-6xl px-4 py-5">{children}</main>
-        <footer className="mt-14 bg-shop-900">
+        <footer className="mt-14 bg-shop-900 print:hidden">
           <div className="h-2 hazard" aria-hidden />
           <div className="pegboard">
             <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 text-sm text-steel-300 sm:grid-cols-2 lg:grid-cols-4">
@@ -89,6 +89,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                   <li><Link href="/black-friday-tool-deals-for-mechanics" className="hover:text-white">Black Friday tool deals</Link></li>
                   <li><Link href="/vs" className="hover:text-white">Truck price vs. online</Link></li>
                   <li><Link href="/tool-truck-payment-calculator" className="hover:text-white">Truck payment calculator</Link></li>
+                  <li><Link href="/flyer" className="hover:text-white">Printable shop flyer</Link></li>
                   <li><Link href="/submit" className="hover:text-white">Submit a deal</Link></li>
                   <li><Link href="/sponsor" className="hover:text-white">Sponsor Off the Truck</Link></li>
                   <li><Link href="/#signup" className="hover:text-white">Get the daily email</Link></li>
