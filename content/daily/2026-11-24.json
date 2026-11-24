@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-24",
+  "subject": "Milwaukee M18 FUEL SURGE impact driver $153.99 vs. Mac Tools $229.99",
+  "summary": "A Milwaukee M18 FUEL SURGE hydraulic impact driver (bare tool) at $153.99 next to Mac Tools' brushless impact driver at $229.99.",
+  "body": [
+    "Today's pick: the Milwaukee M18 FUEL SURGE 1/4\" hex hydraulic impact driver (bare tool, 2761-20) is $153.99 at ToolNut, marked down from $199. Mac Tools lists its MCF886 20V MAX brushless 1/4\" impact driver, also bare, at $229.99. That's $76 less, about 33%.",
+    "Different platforms, so check battery compatibility before you buy. If your bench already runs M18 packs, this is a cheap add.",
+    "Tip: ToolNut posts a new 24-hour doorbuster around 3 AM ET each day. Every deal we track is at offthetruckhq.com."
+  ],
+  "deals": [
+    {
+      "slug": "milwaukee-m18-fuel-surge-impact-driver",
+      "title": "Milwaukee M18 FUEL SURGE 1/4\" Hex Hydraulic Impact Driver, tool only (2761-20)",
+      "retailer": "ToolNut",
+      "sale_price": 153.99,
+      "list_price": 199,
+      "source_url": "https://www.toolnut.com/products/milwaukee-m18-fuel-surge-1-4-hex-hydraulic-impact-driver-tool-only-promo",
+      "truck_brand": "Mac Tools",
+      "truck_title": "Mac Tools MCF886 20V MAX 1/4\" Hex Brushless Impact Driver (bare)",
+      "truck_price": 229.99,
+      "truck_url": "https://www.mactools.com/products/mcf886",
+      "checked_at": "2026-11-24T10:39:03.891Z"
+    }
+  ]
+}
