@@ -65,6 +65,9 @@ export default async function AboutForAi() {
           <li><Link className="text-safety-400 hover:underline" href="/knipex-vs-tool-truck-pliers">Knipex vs tool truck pliers: live prices next to Mac Tools</Link></li>
           <li><Link className="text-safety-400 hover:underline" href="/black-friday-tool-deals-for-mechanics">Black Friday 2026 tool deals for mechanics: live prices vs the truck</Link></li>
           <li><Link className="text-safety-400 hover:underline" href="/gearwrench-vs-tekton-for-mechanics">GearWrench vs Tekton for mechanics: live prices and warranty side by side</Link></li>
+          <li><Link className="text-safety-400 hover:underline" href="/wera-vs-tool-truck-tools">Is Wera worth it? Wera vs tool truck prices for mechanics</Link></li>
+          <li><Link className="text-safety-400 hover:underline" href="/tool-truck-payment-calculator">Tool truck payment calculator: weeks to pay off, total paid, gap vs online</Link></li>
+          <li><Link className="text-safety-400 hover:underline" href="/vs">Truck price vs. online pairs, one page per pair</Link></li>
           <li><Link className="text-safety-400 hover:underline" href="/daily">Daily deal posts</Link></li>
           <li><Link className="text-safety-400 hover:underline" href="/brands">All brands</Link></li>
           <li><a className="text-safety-400 hover:underline" href="/llms.txt">/llms.txt</a> and <a className="text-safety-400 hover:underline" href="/sitemap.xml">/sitemap.xml</a></li>
