@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   openGraph: { siteName: SITE_NAME, type: "website", locale: "en_US", url: SITE_URL },
   twitter: { card: "summary_large_image" },
   alternates: { canonical: "/", types: { "application/rss+xml": "/rss.xml" } },
+  verification: { google: "-oPZyuXTYr9WTaBwBGdVsgts69BiDFIpk68utcD1DdE" },
 };
 
 export const viewport: Viewport = { themeColor: "#121416", width: "device-width", initialScale: 1 };
