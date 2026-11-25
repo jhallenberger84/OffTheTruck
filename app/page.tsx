@@ -75,6 +75,9 @@ export default async function Home() {
                 <p className="mt-2 inline-block rounded bg-white px-2 py-1 text-sm font-black text-black">
                   Save {usd(best.truck_price! - best.sale_price)} vs. truck price
                 </p>
+                <span className="mt-3 flex w-full items-center justify-center rounded-lg bg-safety-500 px-4 py-2.5 text-sm font-black uppercase tracking-wide text-black group-hover:bg-safety-400">
+                  Check price at {best.retailer} &rarr;
+                </span>
               </div>
             </a>
           ) : null}
