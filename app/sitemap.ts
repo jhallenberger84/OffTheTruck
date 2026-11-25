@@ -23,6 +23,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_URL}/black-friday-tool-deals-for-mechanics`, lastModified: now, changeFrequency: "daily", priority: 0.8 },
     { url: `${SITE_URL}/gearwrench-vs-tekton-for-mechanics`, lastModified: now, changeFrequency: "daily", priority: 0.8 },
     { url: `${SITE_URL}/wera-vs-tool-truck-tools`, lastModified: now, changeFrequency: "daily", priority: 0.8 },
+    { url: `${SITE_URL}/impact-socket-sets-for-mechanics`, lastModified: now, changeFrequency: "daily", priority: 0.8 },
     { url: `${SITE_URL}/tool-truck-payment-calculator`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${SITE_URL}/vs`, lastModified: now, changeFrequency: "daily", priority: 0.7 },
     ...pairs.map((p) => ({ url: `${SITE_URL}/vs/${p.slug}`, lastModified: now, changeFrequency: "daily" as const, priority: 0.6 })),
