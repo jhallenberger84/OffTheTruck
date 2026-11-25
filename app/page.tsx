@@ -7,7 +7,8 @@ import { SignupBlock } from "@/components/SignupBlock";
 import { SignupForm } from "@/components/Forms";
 import { brandColor } from "@/lib/brands";
 import { brandsOf, getActiveDeals } from "@/lib/deals";
-import { brandSlug, CATEGORIES } from "@/lib/site";
+import { JsonLd } from "@/components/JsonLd";
+import { brandSlug, CATEGORIES, SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
 
 export const revalidate = 300;
 
@@ -23,6 +24,15 @@ export default async function Home() {
 
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@graph": [
+            { "@type": "Organization", "name": SITE_NAME, "url": SITE_URL, "description": SITE_TAGLINE },
+            { "@type": "WebSite", "name": SITE_NAME, "url": SITE_URL, "description": SITE_TAGLINE, "publisher": { "@type": "Organization", "name": SITE_NAME, "url": SITE_URL } },
+          ],
+        }}
+      />
       <section className="relative -mx-4 -mt-5 mb-6 overflow-hidden border-b border-black diamond-plate sm:mx-0 sm:mt-0 sm:rounded-2xl sm:border">
         <div className="grid gap-6 px-5 py-8 sm:px-8 sm:py-10 lg:grid-cols-[1.4fr_1fr] lg:items-center">
           <div>

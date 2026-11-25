@@ -4,8 +4,10 @@ import { notFound } from "next/navigation";
 import { ShareBar } from "@/components/ShareBar";
 import { TopSignup } from "@/components/TopSignup";
 import { ArrowIcon, TruckIcon } from "@/components/Icons";
+import { JsonLd } from "@/components/JsonLd";
 import { getTruckPair, getTruckPairs, shortTruck } from "@/lib/pairs";
 import { fmtDate } from "@/lib/facts";
+import { SITE_URL } from "@/lib/site";
 
 export const revalidate = 300;
 
@@ -31,8 +33,58 @@ export default async function VsPage({ params }: { params: Promise<{ slug: strin
   const shareText = p.save > 0
     ? `${p.truck_brand} ${usd(p.truck_price)} vs ${p.brand} ${usd(p.sale_price)} online. ${usd(p.save)} difference.`
     : `${p.truck_brand} vs ${p.brand}: price check`;
+  const truckName = shortTruck(p);
+  const pageUrl = `${SITE_URL}/vs/${slug}`;
+  const productLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: p.title,
+    brand: { "@type": "Brand", name: p.brand },
+    description: `${truckName} lists at ${usd(p.truck_price)} on the brand's site. ${p.title} is ${usd(p.sale_price)} at ${p.retailer} (checked ${fmtDate(p.checked_at)}).`,
+    offers: {
+      "@type": "Offer",
+      price: p.sale_price.toFixed(2),
+      priceCurrency: "USD",
+      url: pageUrl,
+      seller: { "@type": "Organization", name: p.retailer },
+    },
+  };
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: `How much is the ${truckName}?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `${usd(p.truck_price)} list on the ${p.truck_brand} website${p.truck_checked_at ? `, checked ${fmtDate(p.truck_checked_at)}` : ""}. The price on a truck can differ.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `How much is the ${p.title} online?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `${usd(p.sale_price)} at ${p.retailer}, checked ${fmtDate(p.checked_at)}. Confirm the price on the store page before you buy.`,
+        },
+      },
+      ...(p.save > 0
+        ? [{
+            "@type": "Question",
+            name: `How much do you save vs the ${p.truck_brand} price?`,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: `${usd(p.save)} (${p.savePct}%) if you buy the ${p.brand} at ${p.retailer} instead of paying the ${p.truck_brand} list price.`,
+            },
+          }]
+        : []),
+    ],
+  };
   return (
     <article className="mx-auto max-w-3xl">
+      <JsonLd data={productLd} />
+      <JsonLd data={faqLd} />
       <p className="mb-2 flex items-center gap-2 text-xs font-black uppercase tracking-[0.2em] text-safety-400"><TruckIcon className="h-4 w-4" /> Truck price vs. online</p>
       <h1 className="text-3xl font-black leading-tight text-white sm:text-4xl">
         {p.save > 0 ? <>Save {usd(p.save)} ({p.savePct}%) vs. the {p.truck_brand} price</> : <>{p.truck_brand} vs. {p.brand}: the truck one is cheaper right now</>}

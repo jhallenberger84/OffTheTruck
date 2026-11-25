@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Truck price vs. online: every pair we've checked",
   description: "Every live deal we have next to a real tool-truck brand price, biggest difference first. Each one has its own shareable page.",
   alternates: { canonical: "/vs" },
+  openGraph: { url: "/vs", type: "website" },
 };
 const usd = (n: number) => n.toLocaleString("en-US", { style: "currency", currency: "USD" });
 
