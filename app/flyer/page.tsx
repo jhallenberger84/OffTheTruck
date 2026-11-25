@@ -39,11 +39,11 @@ export default async function Flyer() {
           </tbody>
         </table>
         <p className="mt-2 text-xs text-gray-600">Prices checked {pairs[0] ? fmtDate(pairs[0].checked_at) : ""} on each seller&apos;s own website. They change; check the site for today&apos;s.</p>
-        <div className="mt-6 flex items-center gap-6">
+        <div className="mt-6 flex flex-wrap items-center gap-6">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/flyer-qr.svg" alt="QR code to offthetruckhq.com" className="h-40 w-40" />
           <div>
-            <p className="text-3xl font-black">offthetruckhq.com</p>
+            <p className="text-2xl font-black sm:text-3xl">offthetruckhq.com</p>
             <p className="mt-1 text-lg">Scan it. Free. No account.</p>
             <p className="mt-1 text-sm text-gray-700">Also there: a tool truck payment calculator, so you can see what &ldquo;$20 a week&rdquo; really adds up to.</p>
           </div>
