@@ -111,7 +111,7 @@ export default async function WeraVsToolTruck() {
       <section aria-labelledby="pick">
         <h2 id="pick" className="mb-2 text-2xl font-black text-white">How to decide, tech to tech</h2>
         <ul className="list-disc space-y-2 pl-5">
-          <li><strong className="text-white">Don&apos;t assume Wera is the cheap option.</strong> Compare the exact set: count the wrenches and the sizes. Above, the Mac set has one more wrench (7 mm) and costs less on Mac&apos;s site.</li>
+          <li><strong className="text-white">Don&apos;t assume Wera is the cheap option.</strong> Compare the exact set: count the wrenches and the sizes.{joker && (joker.deal as Deal).sale_price > joker.mac.price ? " Above, the Mac set has one more wrench (7 mm) and costs less on Mac's site." : " When we last had the Wera Joker 11-piece set live (KC Tool, $489.91 on November 24, 2026), Mac's 12-piece metric ratcheting set was $399.99 on mactools.com: one more wrench (7 mm) and less money."}</li>
           <li><strong className="text-white">Buying a bit set?</strong> Wera&apos;s warranty doesn&apos;t cover bits or bit holders. Budget for replacing bits the same as you would with any brand.</li>
           <li><strong className="text-white">Paying cash vs. a truck balance.</strong> A truck price on a weekly payment costs more than the sticker if there&apos;s interest. The <Link className="text-safety-400 hover:underline" href="/tool-truck-payment-calculator">payment calculator</Link> shows how much.</li>
         </ul>
