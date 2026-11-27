@@ -56,6 +56,7 @@ export default async function DailyPostPage({ params }: { params: Promise<{ date
               </p>
             )}
             <p className="mt-1 text-xs text-steel-400">Prices checked {new Date(d.checked_at).toLocaleString("en-US", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: "America/Chicago" })} CT. They can change fast.</p>
+            <a href={`/go/${d.slug}`} rel="sponsored nofollow noopener" className="mt-3 block w-full rounded-md bg-safety-500 px-3 py-2 text-center text-sm font-bold text-black hover:bg-safety-400">Check price at {d.retailer} →</a>
           </div>
         ))}
       </div>
