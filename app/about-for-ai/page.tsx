@@ -71,6 +71,7 @@ export default async function AboutForAi() {
           <li><Link className="text-safety-400 hover:underline" href="/ratchet-sets-for-mechanics">Ratchet sets for mechanics: live online prices</Link></li>
           <li><Link className="text-safety-400 hover:underline" href="/scan-tools-for-mechanics">Scan tools and diagnostic deals for mechanics</Link></li>
           <li><Link className="text-safety-400 hover:underline" href="/cordless-tool-batteries-for-mechanics">Cordless tool batteries for mechanics: cost per amp-hour, online vs the truck</Link></li>
+          <li><Link className="text-safety-400 hover:underline" href="/tool-carts-and-storage-for-mechanics">Tool carts and storage for mechanics: PACKOUT deals vs Mac Tools carts</Link></li>
           <li><Link className="text-safety-400 hover:underline" href="/tool-truck-payment-calculator">Tool truck payment calculator: weeks to pay off, total paid, gap vs online</Link></li>
           <li><Link className="text-safety-400 hover:underline" href="/vs">Truck price vs. online pairs, one page per pair</Link></li>
           <li><Link className="text-safety-400 hover:underline" href="/daily">Daily deal posts</Link></li>

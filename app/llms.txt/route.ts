@@ -25,6 +25,7 @@ export async function GET() {
     `- [Ratchet sets for mechanics](${SITE_URL}/ratchet-sets-for-mechanics): live ratchet, ratcheting wrench, and mechanics-set deals; truck prices only when already in the database`,
     `- [Scan tools and diagnostic deals for mechanics](${SITE_URL}/scan-tools-for-mechanics): live OBD-II scanner and other diagnostic deals, with a Mac Tools list price only where a pair is already in the database`,
     `- [Cordless tool batteries for mechanics](${SITE_URL}/cordless-tool-batteries-for-mechanics): live Milwaukee M18 and DeWALT 20V MAX battery deals with price per amp-hour, next to the Mac Tools 20V battery price from mactools.com, and each brand's battery warranty terms with sources`,
+    `- [Tool carts and storage for mechanics](${SITE_URL}/tool-carts-and-storage-for-mechanics): live Milwaukee PACKOUT rolling storage deals with load ratings from the seller pages, next to Mac Tools utility cart prices and warranty lines read from mactools.com`,
     `- [Tool truck payment calculator](${SITE_URL}/tool-truck-payment-calculator): weeks to pay off a truck balance at a weekly payment and APR, total paid, and the gap to the same kind of tool online (default APR is Snap-on's 2025 average yield on finance receivables, sourced)`,
     `- [Truck price vs. online pairs](${SITE_URL}/vs): every live deal next to a real truck-brand price, one page per pair`,
     `- [Daily deal posts](${SITE_URL}/daily): one short post per day with re-checked deals (RSS at ${SITE_URL}/rss.xml)`,
