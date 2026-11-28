@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getTruckPairs } from "@/lib/pairs";
 import { fmtDate } from "@/lib/facts";
+import { SignupBlock } from "@/components/SignupBlock";
 
 export const revalidate = 300;
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ export default async function VsIndex() {
         ))}
       </ul>
       <p className="mt-6 text-sm">Paying weekly? Try the <Link className="font-semibold text-safety-400 hover:underline" href="/tool-truck-payment-calculator">tool truck payment calculator</Link>.</p>
+      <SignupBlock source="vs-index" />
     </article>
   );
 }

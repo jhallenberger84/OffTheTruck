@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { brandColor } from "@/lib/brands";
 import { brandsOf, getActiveDeals } from "@/lib/deals";
+import { SignupBlock } from "@/components/SignupBlock";
 
 export const revalidate = 300;
 export const metadata = { title: "Brands", description: "Tool deals by brand: Tekton, GearWrench, Milwaukee, DeWALT, Knipex, Wera, and more.", alternates: { canonical: "/brands" } };
@@ -18,6 +19,7 @@ export default async function Brands() {
           </Link>
         ))}
       </div>
+      <SignupBlock source="brands" />
     </>
   );
 }
